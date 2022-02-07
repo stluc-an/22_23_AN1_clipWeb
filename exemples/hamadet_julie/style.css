@@ -1,0 +1,637 @@
+body {
+	background: black;
+}
+
+/*première partie*/
+
+#fleur1 {
+	position: absolute;
+    width: 5%;
+    left: 9%;
+    bottom: 7%;
+	opacity: 0;
+}
+
+#fleur2 {
+	position: absolute;
+    width: 6%;
+    left: 42%;
+    bottom: 11%;
+	opacity: 0;
+}
+
+#fleur3 {
+	position: absolute;
+    width: 5%;
+    right: 33%;
+    bottom: 3%;
+	opacity: 0;
+}
+
+#fleur4 {
+	position: absolute;
+    width: 5%;
+    right: 5%;
+    bottom: 3%;
+	opacity: 0;
+}
+
+#pousse1 {
+	position: absolute;
+    height: 25%;
+    left: 4%;
+    bottom: 4%;
+	opacity: 0;
+}
+
+#pousse2 {
+	position: absolute;
+    height: 30%;
+    left: 36%;
+    bottom: 7%;
+	opacity: 0;
+}
+
+#pousse3 {
+	position: absolute;
+    height: 25%;
+    right: 28%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse4 {
+	position: absolute;
+    height: 25%;
+    right: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse5 {
+	position: absolute;
+    height: 60%;
+    left: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse6 {
+	position: absolute;
+    height: 87%;
+    left: 31%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse7 {
+	position: absolute;
+    height: 55%;
+    right: 16%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse8 {
+	position: absolute;
+    height: 57%;
+    right: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse9 {
+	position: absolute;
+    height: 100%;
+    left: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse10 {
+	position: absolute;
+    height: 100%;
+    left: 30%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse11 {
+	position: absolute;
+    height: 100%;
+    right: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse12 {
+	position: absolute;
+    height: 85%;
+    right: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse13 {
+	position: absolute;
+    height: 100%;
+    left: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse14 {
+	position: absolute;
+    height: 100%;
+    left: 30%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse15 {
+	position: absolute;
+    height: 100%;
+    right: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse16 {
+	position: absolute;
+    height: 85%;
+    right: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+
+/*deuxième partie*/
+
+#oiseaux1 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0%;
+    bottom: 0%;
+	opacity: 0;
+}
+
+#oiseaux2 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0%;
+    bottom: 0%;
+	opacity: 0;
+}
+
+#oiseaux3 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0%;
+    bottom: 0%;
+	opacity: 0;
+}
+
+#oiseaux4 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0%;
+    bottom: 0%;
+	opacity: 0;
+}
+
+#oiseaux5 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0%;
+    bottom: 0%;
+	opacity: 0;
+}
+
+#nuage1 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    top: 0%;
+	opacity: 0;
+}
+
+#nuage2 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    top: 0%;
+	opacity: 0;
+}
+
+#nuage3 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    top: 0;
+	opacity: 0;
+}
+
+#nuage4 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    top: 0;
+	opacity: 0;
+}
+
+#trans1 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+
+
+#trans2 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#trans3 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#trans4 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    right: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#lignes1 {
+	position: absolute;
+    height: 100%;
+	width: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#orbe1 {
+	position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#masse1 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    top: 0;
+	opacity: 0;
+}
+
+#masse2 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    top: 0;
+	opacity: 0;
+}
+
+#masse3 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    top: 0;
+	opacity: 0;
+}
+
+#masse4 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#masse5 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#masse6 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+/*troisème partie*/
+
+#lignes3 {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#gardiens {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0%;
+}
+
+#fleur1bis {
+	position: absolute;
+    width: 3%;
+    left: 10%;
+    bottom: 10%;
+	opacity: 0;
+}
+
+#fleur2bis {
+	position: absolute;
+    width: 4%;
+    left: 43%;
+    bottom: 13%;
+	opacity: 0;
+}
+
+#fleur3bis {
+	position: absolute;
+    width: 3%;
+    right: 34%;
+    bottom: 5%;
+	opacity: 0;
+}
+
+#fleur4bis {
+	position: absolute;
+    width: 3%;
+    right: 6%;
+    bottom: 5%;
+	opacity: 0;
+}
+
+#pousse1bis {
+	position: absolute;
+    height: 25%;
+    left: 4%;
+    bottom: 4%;
+	opacity: 0;
+}
+
+#pousse2bis {
+	position: absolute;
+    height: 30%;
+    left: 36%;
+    bottom: 7%;
+	opacity: 0;
+}
+
+#pousse3bis {
+	position: absolute;
+    height: 25%;
+    right: 28%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse4bis {
+	position: absolute;
+    height: 25%;
+    right: 0%;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse5bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+
+#pousse6bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse7bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse8bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#pousse9bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#oiseaux1bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#oiseaux2bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#oiseaux3bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#orbe1bis {
+	position: absolute;
+    width: 10%;
+	height: 18%;
+    left: 20%;
+    top: 2%;
+	opacity: 0;
+}
+
+#orbe2bis {
+	position: absolute;
+    width: 10%;
+	height: 18%;
+    left: 51%;
+    top: 2%;
+	opacity: 0;
+}
+
+#orbe3bis {
+	position: absolute;
+    width: 10%;
+	height: 18%;
+    right: 16%;
+    top: 5%;
+	opacity: 0;
+}
+
+#nuage1bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    right: 0%;
+    top: 0%;
+	opacity: 0;
+}
+
+#nuage2bis {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0%;
+    top: 0%;
+	opacity: 0;
+}
+
+#oiseaux1f {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#oiseaux2f {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+    left: 0;
+    bottom: 0;
+	opacity: 0;
+}
+
+#fleur1f {
+	position: absolute;
+    width: 3%;
+    left: 50%;
+    bottom: 10%;
+	opacity: 0;
+}
+
+#fleur2f {
+	position: absolute;
+    width: 7%;
+    left: 48%;
+    bottom: 6%;
+	opacity: 0;
+}
+
+#fleur3f {
+	position: absolute;
+    width: 10%;
+    left: 46%;
+    bottom: 3%;
+	opacity: 0;
+}
+
+#text1 {
+	position: absolute;
+	top: 10%;
+	left : 3%;
+	font-family:monospace;
+	font-size : 4vh;
+	color: white;
+	opacity : 0;
+}
+#text2 {
+	position: absolute;
+	top: 30%;
+	right : 3%;
+	font-family:monospace;
+	font-size : 4vh;
+	color: white;
+	opacity : 0;
+}
+
+#logo1 {
+	position: absolute;
+    width: 30%;
+    right: 51%;
+    bottom: 15%;
+	opacity: 0;
+}
+
+#logo2 {
+	position: absolute;
+    width: 15%;
+    left: 55%;
+    bottom: 15%;
+	opacity: 0;
+}

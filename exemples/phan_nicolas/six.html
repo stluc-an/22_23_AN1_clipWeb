@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>p5.js example</title>
+
+
+
+  <script src="../../lib/p5/p5.min.js"></script>
+  <script src="../../lib/p5/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="six.css"/>
+  <script src="six.js"></script>
+  <script type="text/javascript" src="../../lib/SequencerJS/dist/bundle.js"></script>
+  <script src="./scripts/particle.js"></script>
+  <script src="./scripts/particletrois.js"></script>
+  <script src="./scripts/particleprochain.js"></script>
+  <script src="./scripts/particlequatre.js"></script>
+  <script src="./scripts/particlepartout.js"></script>
+  <script src="./scripts/particleavant.js"></script>
+
+
+
+<style>
+    html, body {
+
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    body {
+      background-image: url('./images/1.fond.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    main {
+      overflow-y: scroll;
+      height: : 100%;
+    }
+
+    main>div {
+      height: 800%;
+    }
+ </style>
+ 
+<link rel="preload" as="image" href="1.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="31.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="ciel2.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="ciel40.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/1.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="9.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/2.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/3.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/4.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/5.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/6.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/7.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/8.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/9.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/10.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/11.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/12.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/13.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/14.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/15.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/16.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/17.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/18.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/19.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/20.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/21.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/22.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/23.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/24.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/25.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/26.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/27.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/28.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/29.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/30.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/31.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/32.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/33.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/34.fond.jpg" imagesrcset="" imagesizes="266 vw">
+<link rel="preload" as="image" href="./images/35.fond.jpg" imagesrcset="" imagesizes="266 vw">
+
+</head>
+
+<body>
+   <main>
+   <div>
+   </div>
+   </main>
+
+
+
+</body>
+
+</html>

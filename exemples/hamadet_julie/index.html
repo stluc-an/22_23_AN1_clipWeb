@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<link rel="stylesheet" href="style.css">
+	
+	<style type="text/css">
+    body { margin:0; overflow: hidden;}
+    </style>
+	
+  <title>clip CloZee</title>
+	
+	<script type="text/javascript" src="../../lib/p5/p5.min.js"></script>
+	<script type="text/javascript" src="../../lib/p5/addons/p5.sound.min.js"></script>
+	<script type="text/javascript" src="../../lib/SequencerJS/dist/bundle.js"></script>
+	<script type="text/javascript" src="./sketch.js"></script>
+	<script type="text/javascript" src="./src/Mont.js"></script>
+	<script type="text/javascript" src="./src/Brouilli.js"></script>
+	<script type="text/javascript" src="./src/Lights1.js"></script>
+	<script type="text/javascript" src="./src/Lights2.js"></script>
+	<script type="text/javascript" src="./src/Lignes2.js"></script>
+	<script type="text/javascript" src="./src/Mont2.js"></script>
+	<script type="text/javascript" src="./src/Mont3.js"></script>
+	
+	<link rel="preload" as="image" href="./assets/img/fleur1.png">
+	
+	<link rel="preload" as="image" href="./assets/img/pousse1.png">
+	<link rel="preload" as="image" href="./assets/img/pousse1cutg.png">
+	<link rel="preload" as="image" href="./assets/img/pousse1cutd.png">
+		
+	<link rel="preload" as="image" href="./assets/img/pousse2a.png">
+	<link rel="preload" as="image" href="./assets/img/pousse3a.png">
+	<link rel="preload" as="image" href="./assets/img/pousse4a.png">	
+	<link rel="preload" as="image" href="./assets/img/pousse5a.png">	
+	
+	<link rel="preload" as="image" href="./assets/img/pousse2b.png">
+	<link rel="preload" as="image" href="./assets/img/pousse3b.png">
+	<link rel="preload" as="image" href="./assets/img/pousse4b.png">	
+	<link rel="preload" as="image" href="./assets/img/pousse5b.png">
+	
+	<link rel="preload" as="image" href="./assets/img/pousse2c.png">
+	<link rel="preload" as="image" href="./assets/img/pousse3c.png">
+	<link rel="preload" as="image" href="./assets/img/pousse4c.png">	
+	<link rel="preload" as="image" href="./assets/img/pousse5c.png">
+		
+	<link rel="preload" as="image" href="./assets/img/oiseaux1.png">
+	<link rel="preload" as="image" href="./assets/img/oiseaux2.png">
+	<link rel="preload" as="image" href="./assets/img/oiseaux3.png">	
+	<link rel="preload" as="image" href="./assets/img/oiseaux4.png">
+	<link rel="preload" as="image" href="./assets/img/oiseaux5.png">
+	
+	<link rel="preload" as="image" href="./assets/img/nuage1.png">
+	<link rel="preload" as="image" href="./assets/img/nuage2.png">
+	<link rel="preload" as="image" href="./assets/img/nuage3.png">	
+	<link rel="preload" as="image" href="./assets/img/nuage4.png">
+	
+	<link rel="preload" as="image" href="./assets/img/transf1.png">
+	<link rel="preload" as="image" href="./assets/img/transf2.png">
+	<link rel="preload" as="image" href="./assets/img/transf3.png">	
+	<link rel="preload" as="image" href="./assets/img/transf4.png">
+	
+	<link rel="preload" as="image" href="./assets/img/lignes1.png">
+	
+	<link rel="preload" as="image" href="./assets/img/orbe1.png">
+	
+	<link rel="preload" as="image" href="./assets/img/massenoire1.png">	
+	<link rel="preload" as="image" href="./assets/img/massenoire2.png">
+	<link rel="preload" as="image" href="./assets/img/massenoire3.png">
+	<link rel="preload" as="image" href="./assets/img/massenoire4.png">
+	<link rel="preload" as="image" href="./assets/img/massenoire5.png">	
+	<link rel="preload" as="image" href="./assets/img/massenoire6.png">
+	
+	<link rel="preload" as="image" href="./assets/img/lignes3.png">
+	
+	<link rel="preload" as="image" href="./assets/img/gardien.png">
+	
+	<link rel="preload" as="image" href="./assets/img/pousse_partie2_1.png">
+	<link rel="preload" as="image" href="./assets/img/pousse_partie2_2.png">
+	<link rel="preload" as="image" href="./assets/img/pousse_partie2_3.png">
+	<link rel="preload" as="image" href="./assets/img/pousse_partie2_4.png">	
+	<link rel="preload" as="image" href="./assets/img/pousse_partie2_5.png">
+
+	<link rel="preload" as="image" href="./assets/img/oiseaux_partie2_1.png">
+	<link rel="preload" as="image" href="./assets/img/oiseaux_partie2_2.png">
+	<link rel="preload" as="image" href="./assets/img/oiseaux_partie2_3.png">
+	
+	<link rel="preload" as="image" href="./assets/img/orbe2.png">
+	
+	<link rel="preload" as="image" href="./assets/img/nuage_partie2_1.png">
+	<link rel="preload" as="image" href="./assets/img/nuage_partie2_2.png">
+	
+	<link rel="preload" as="image" href="./assets/img/oiseaux_partie3_1.png">
+	<link rel="preload" as="image" href="./assets/img/oiseaux_partie3_2.png">
+	
+	<link rel="preload" as="image" href="./assets/img/logo1.png">
+	<link rel="preload" as="image" href="./assets/img/logo2.png">
+
+</head>
+
+	
+<body>
+  <main>
+	 <section id="img">
+		<img src="./assets/img/fleur1.png" id="fleur1">
+		<img src="./assets/img/fleur1.png" id="fleur2">
+		<img src="./assets/img/fleur1.png" id="fleur3">
+		<img src="./assets/img/fleur1.png" id="fleur4">
+		  
+		 <img src="./assets/img/pousse1.png" id="pousse1"> 
+		 <img src="./assets/img/pousse1.png" id="pousse2">
+		 <img src="./assets/img/pousse1.png" id="pousse3"> 
+		 <img src="./assets/img/pousse1.png" id="pousse4"> 
+		  
+		 <img src="./assets/img/pousse2a.png" id="pousse5"> 
+		 <img src="./assets/img/pousse3a.png" id="pousse6">
+		 <img src="./assets/img/pousse4a.png" id="pousse7">
+		 <img src="./assets/img/pousse5a.png" id="pousse8">
+		  
+		 <img src="./assets/img/pousse2b.png" id="pousse9"> 
+		 <img src="./assets/img/pousse3b.png" id="pousse10">
+		 <img src="./assets/img/pousse4b.png" id="pousse11">
+		 <img src="./assets/img/pousse5b.png" id="pousse12">
+		 
+		<img src="./assets/img/pousse2c.png" id="pousse13">
+		<img src="./assets/img/pousse3c.png" id="pousse14">
+		<img src="./assets/img/pousse4c.png" id="pousse15">
+		<img src="./assets/img/pousse5c.png" id="pousse16">
+		  
+		<img src="./assets/img/oiseaux1.png" id="oiseaux1">
+		<img src="./assets/img/oiseaux2.png" id="oiseaux2">
+		<img src="./assets/img/oiseaux3.png" id="oiseaux3">
+		<img src="./assets/img/oiseaux4.png" id="oiseaux4">
+		<img src="./assets/img/oiseaux5.png" id="oiseaux5">
+		  
+		<img src="./assets/img/nuage1.png" id="nuage1">
+		<img src="./assets/img/nuage2.png" id="nuage2">
+		<img src="./assets/img/nuage3.png" id="nuage3">
+		<img src="./assets/img/nuage4.png" id="nuage4">
+		
+		<img src="./assets/img/transf1.png" id="trans1">
+		<img src="./assets/img/transf2.png" id="trans2">
+		<img src="./assets/img/transf3.png" id="trans3">
+		<img src="./assets/img/transf4.png" id="trans4">
+		  
+		<img src="./assets/img/lignes1.png" id="lignes1">
+		  
+		<img src="./assets/img/orbe1.png" id="orbe1">
+
+		<img src="./assets/img/massenoire1.png" id="masse1">
+		<img src="./assets/img/massenoire2.png" id="masse2">
+		<img src="./assets/img/massenoire3.png" id="masse3">
+		<img src="./assets/img/massenoire4.png" id="masse4">
+		<img src="./assets/img/massenoire5.png" id="masse5">
+		<img src="./assets/img/massenoire6.png" id="masse6">
+		  
+		<img src="./assets/img/lignes3.png" id="lignes3">
+
+		<img src="./assets/img/gardien.png" id="gardiens">
+		  
+		<img src="./assets/img/fleur1.png" id="fleur1bis">
+		<img src="./assets/img/fleur1.png" id="fleur2bis">
+		<img src="./assets/img/fleur1.png" id="fleur3bis">
+		<img src="./assets/img/fleur1.png" id="fleur4bis">
+		  
+		<img src="./assets/img/pousse1cutg.png" id="pousse1bis"> 
+		<img src="./assets/img/pousse1.png" id="pousse2bis">
+		<img src="./assets/img/pousse1.png" id="pousse3bis"> 
+		<img src="./assets/img/pousse1cutd.png" id="pousse4bis"> 
+		
+		<img src="./assets/img/pousse_partie2_1.png" id="pousse5bis">
+		<img src="./assets/img/pousse_partie2_2.png" id="pousse6bis"> 
+		<img src="./assets/img/pousse_partie2_3.png" id="pousse7bis">
+		<img src="./assets/img/pousse_partie2_4.png" id="pousse8bis">
+		<img src="./assets/img/pousse_partie2_5.png" id="pousse9bis">
+		  
+		<img src="./assets/img/oiseaux_partie2_1.png" id="oiseaux1bis">
+		<img src="./assets/img/oiseaux_partie2_2.png" id="oiseaux2bis">
+		<img src="./assets/img/oiseaux_partie2_3.png" id="oiseaux3bis">
+		  
+		<img src="./assets/img/orbe2.png" id="orbe1bis">
+		<img src="./assets/img/orbe2.png" id="orbe2bis">
+		<img src="./assets/img/orbe2.png" id="orbe3bis">
+		  
+		<img src="./assets/img/nuage_partie2_1.png" id="nuage1bis">
+		<img src="./assets/img/nuage_partie2_2.png" id="nuage2bis">
+		  
+		<img src="./assets/img/oiseaux_partie3_1.png" id="oiseaux1f">
+		<img src="./assets/img/oiseaux_partie3_2.png" id="oiseaux2f">
+		  
+		<img src="./assets/img/fleur1.png" id="fleur1f">
+		<img src="./assets/img/fleur1.png" id="fleur2f">
+		<img src="./assets/img/fleur1.png" id="fleur3f">
+		  
+	</section> 
+  </main>
+</body>
+	
+	<section id= "gen">
+		 <h1 id="text1"><u>Musique</u> :<br> <i>Mirage</i> de Clozee, <i>Neon Jungle</i>, 2020</h1>
+		
+		<h2 id="text2"> <u>Clip</u> :<br>Julie Hamadet, arts numériques, ESA Saint-Luc Bruxelles, 2020-2021</h2>
+	
+		<img src="./assets/img/logo1.png" id="logo1">
+		<img src="./assets/img/logo2.png" id="logo2">
+	</section>
+
+</html>

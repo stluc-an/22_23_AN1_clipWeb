@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+<html lang="">
+
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>p5.js example</title>
+
+
+
+   <script src="../../lib/p5/p5.js"></script>
+   <script src="../../lib/p5/addons/p5.sound.min.js"></script>
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="PRINCIPAL.css"/>
+   <script src="./scripts/PRINCIPAL.js"></script>
+</head>
+
+<body>
+
+<div></div>
+  <div class = "boite"> <p1 class ="name"> - ENTER YOUR NAME - </p1> <br> <p2 class = "allumer"> (Turn on the volume)</p2>
+
+
+  </div>
+     <div class="zone">
+         <textarea id="texte"></textarea>
+         <button id="lecture">LIRE</button>
+   </div>
+
+
+  <div class="zone2">
+   <form action ="six.html"> <button id ="enter">ENTER</button>
+   </form>
+  </div>
+
+
+
+
+
+
+
+<script>
+
+
+
+
+let btnLecture = document.getElementById("lecture");
+let inputText = document.getElementById("texte");
+let btnEnter = document.getElementById("enter");
+
+
+
+
+document.getElementById("enter").style.display = "none";
+
+btnLecture.onclick = function(){
+  let texte = inputText.value ;
+
+  let parole = new SpeechSynthesisUtterance();
+  console.log(window.speechSynthesis.getVoices());
+
+  parole.text = "bonjour " + texte+ " ,  ton prénon humain ne correspond malheureusement pas aux critères du programme  nous allons effectuer une mise à jour , en attendant, apprète toi à vivre une expèrience sonore et visuelle comme tu ne la jamais expèriencé,  cliques sur ènteur si cela te convient, si cela ne te convient pas, mort aux zomo sapihinsse";
+  parole.pitch = 2;  // 0 à 2 (grave)
+  parole.rate = 0.8; // 0.5 à 2 (vitesse)
+  parole.volume = 1 ; // 0 à 1 (volume )
+  parole.lang = "fr-FR";
+
+  speechSynthesis.speak(parole);
+
+
+
+  parole.onend = function(event) {
+
+       console.log(event);
+
+    document.getElementById("enter").style.display = "inline";
+
+
+     }
+
+ }
+
+
+
+
+
+</script>
+</body>
+</html>
