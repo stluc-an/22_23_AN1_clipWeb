@@ -2,7 +2,7 @@
   beakerProject - sketch.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2021-02-04 22:38:59
-  @Last Modified time: 2021-04-07 19:14:37
+  @Last Modified time: 2022-02-10 22:08:26
 \*----------------------------------------*/
 
 p5.Vector.x = new p5.Vector(1, 0, 0);
@@ -29,7 +29,7 @@ function setup() {
 
 	pm = new ParticleManager();
 	cm = new CameraManager();	
-	sequencer = new Sequencer(audioPath, 132, false);
+	sequencer = new Sequencer(audioPath, 132);
 	sequencer.registerSequence({
 		name : "intro-kick",
 		stop : 320,
