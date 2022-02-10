@@ -1,11 +1,16 @@
+const repoName = "20_21_AN1_clipWeb";
+
+
+
+
 const requestClips = async () => {
-	const data = await fetch("https://api.github.com/repos/stluc-an/20_21_AN1_clipWeb/contents/clips")
+	const data = await fetch(`https://api.github.com/repos/stluc-an/${repoName}/contents/clips`)
 	const txt = await data.text();
 	return JSON.parse(txt) || [];
 }
 
 const requestTrackInfo = async (path) => {
-	const data = await fetch("https://stluc-an.github.io/20_21_AN1_clipWeb/"+path+"/README.txt");
+	const data = await fetch(`https://stluc-an.github.io/${repoName}/${path}/README.txt`);
 	const txt = await data.text();
 	return txt.split("\n");
 }
