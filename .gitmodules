@@ -1,3 +1,4 @@
 [submodule "lib/SequencerJS"]
 	path = lib/SequencerJS
 	url = git@github.com:oogre/SequencerJS.git
+	branch = main
