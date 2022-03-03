@@ -69,3 +69,90 @@ Pour cet exercice tu devras produire un clip web musical sous forme d’une page
   - [Le Laboratoire - Spielzeiteuropa 28 - Château capitaine du cabaret soupape](http://www.lelaboratoire.be/)
 
 
+## Pour contribuer
+
+### Crée un pair de clés SSH :
+
+*Seulement sur Windows* : Installe les composants OpenSSH
+
+1. Ouvre le Menu **Settings**, sélectionne **Apps > Apps & Features**, en suite sélectionne **Optional Features**.
+
+2. Cherche dans la liste pour voir si OpenSSH est déjà installé. Si non, au dessus de la page sélectionne **Add a feature**, en suite : 
+   
+   1. Trouve **OpenSSH Client**, puis click **Install**
+
+*Tout OS* : Crée une clé SSH
+
+> Une Clé SSH est une paire de fichiers. L'un est privé, celui-ci ne devrait jamais être partagé avec quiconque. L'autre est public, il peut être partagé. 
+> La techno SSH vous permet de vous connecter sur un ordinateur tièrs configuré au moyen de votre clé public pour reconnaître une communication chiffrée par votre clé privée.
+
+1. Ouvre un **terminal/invité de commande(CMD)** 
+
+2. Entre la commande **ssh-keygen** press **Enter**
+
+3. Ce logiciel te propose de créer une pair de clé rsa public/private  à l'adresse 
+   **\<USER_NAME\>/.ssh/id_rsa** press **Enter**
+
+4. Ce logiciel te propose d'entrer une passphrase laisse le champ vide et press **Enter**
+
+5. Tu dois ensuite confirmer ton passphrase laisse le champ vide et press **Enter**
+
+### Configure Github
+
+1. Ouvre le dossier hébergeant ta clè SSH. 
+   
+   * *Windows* : **/c/Users/user_name/.ssh**
+   
+   * *OSX* : **/Users/user_name_/.ssh**
+   
+   s'y trouve 2 fichiers
+   
+   - **id_rsa** : partie privée de ta clé SSH
+   - **id_rsa.pub** : partie public de ta clé SSH
+
+2. Ajoute ta clé public à ton compte **Github**
+   * À cette adresse https://github.com/settings/keys click le bouton **New SSH key**
+   
+   * Donne un titre à **ta clé**
+   
+   * **Copie / Colle** le contenue du fichier **id_rsa.pub** dans le champ **key**
+   
+   * Click **Add SSH key**
+
+### Configure Github Desktop
+
+Configure **Github Desktop** pour utiliser ta clé SSH
+
+* *Windows* : 
+  
+  * Ouvre ton **invité de commande**, **Copie/Colle** le point suivant et press **Enter** 
+  
+  * ```
+    git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
+    ```
+
+### Crée un fork du projet
+
+* À l'adresse [https://github.com/stluc-an/21_22_AN1_clipWeb](https://github.com/stluc-an/21_22_AN1_clipWeb) 
+
+* Click le bouton **Fork** situé en haut à droite de la page
+
+* Tu viens de créer une copie du projet, cette copie est tienne tu en es propriétaire. Cette copie est à une nouvelle adresse : [https://github.com/\<USER_NAMME\>/21_22_AN1_clipWeb](https://github.com/oogre/21_22_AN1_clipWeb). Il s'agit de ta version de travail.
+
+### Clone le Repository sur ton ordinateur
+
+* Click le bouton **Code**
+
+* Sélection le Tab **SSH**
+
+* Copie le contenu du champs texte 
+  Ex : *git@github.com:\<USER\_NAME\>/21_22_AN1_clipWeb.git*
+
+* Dans **Github Desktop** : Click menu > **File>Clone Repository** 
+
+* Sélectionne le **Tab URL**
+
+* Colle l'adresse copiée précédement dans **Repository URL**
+
+* Entre dans **Local Path** le chemin d'accès sur ton disque dur (là où tu souhaites que Github Desktop télécharge ta version du projet)
+
