@@ -2,7 +2,7 @@
   beakerProject - sketch.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2021-02-04 22:38:59
-  @Last Modified time: 2022-02-10 22:43:32
+  @Last Modified time: 2022-03-03 17:56:27
 \*----------------------------------------*/
 let BPM = 132;
 
@@ -32,7 +32,7 @@ function setup() {
 	sequencer.registerSequence({
 		name : "oneOnTwo", 		
 		measure : 4,					// longueur de la mesure ( default :  1 ) 
-		steps : [2, 4],				// selectionner les step dans la mesure qui déclenchent onStep ( default : [1] )
+		steps : [1, 3],				// selectionner les step dans la mesure qui déclenchent onStep ( default : [1] )
 		onStep : (event) => { // action pour chaque step ( default : ()=>{} )
 			console.log(event)
 		}
