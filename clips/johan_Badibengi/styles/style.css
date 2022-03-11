@@ -1,0 +1,13 @@
+/*
+* @Author: Evrard Vincent
+* @Date:   2021-03-29 15:11:52
+* @Last Modified by:   ogre
+* @Last Modified time: 2021-03-29 15:17:33
+*/
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
