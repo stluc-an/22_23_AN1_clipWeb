@@ -46,7 +46,7 @@ function setup() {
 
 function draw(){
 	sequencer.update();
-	
+	console.log("bonjour")
 }
 
 function windowResized(){
