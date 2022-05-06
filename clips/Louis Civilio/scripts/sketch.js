@@ -4,7 +4,7 @@
   @Date:   2021-02-04 22:38:59
   @Last Modified time: 2022-02-10 22:46:49
 \*----------------------------------------*/
-let audioPath = "./assets/audio/HRFTR_Zealot.mp3";
+let audioPath = "./assets/audio/KindEyes_FuckAPrideBoy.mp3";
 let sequencer;
 
 function setup() {	
@@ -13,7 +13,7 @@ function setup() {
 	frameRate(60);
 	createCanvas(window.innerWidth, window.innerHeight);
 
-	sequencer = new Sequencer(audioPath, 132);
+	sequencer = new Sequencer(audioPath, 145);
 	
 	sequencer.registerSequence({
 		name : "all",
@@ -28,6 +28,20 @@ function setup() {
 		},
 		
 	});
+
+	sequencer.registerSequence({
+		name : "changeBPM",
+		start:244,
+		stop:333,
+		onStart : (event) => {
+			sequencer.BPM = 89;
+		},
+		onStop : (event) => {
+			sequencer.BPM = 145;
+		},
+		
+	});
+
 	}
 
 function draw(){
