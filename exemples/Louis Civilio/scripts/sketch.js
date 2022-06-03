@@ -11,6 +11,7 @@
 	I.3: noise() vs random() - Perlin Noise and p5.js Tutorial
 */
 
+//Chanson : Kind Eyes - Fuck a Pride Boy
 let audioPath = "./assets/audio/KindEyes_FuckAPrideBoy.mp3";
 let sequencer;
 
