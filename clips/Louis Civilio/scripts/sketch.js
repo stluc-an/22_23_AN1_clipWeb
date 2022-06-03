@@ -4,6 +4,13 @@
   @Date:   2021-02-04 22:38:59
   @Last Modified time: 2022-02-10 22:46:49
 \*----------------------------------------*/
+
+/* regarder YT : MandelBulb 3D Fractal (Coding Challenge 168) 
+	Coding Challenge #77: Recursion
+	Coding Challenge #76: 10PRINT in p5.js
+	I.3: noise() vs random() - Perlin Noise and p5.js Tutorial
+*/
+
 let audioPath = "./assets/audio/KindEyes_FuckAPrideBoy.mp3";
 let sequencer;
 
@@ -32,7 +39,7 @@ function setup() {
 	sequencer.registerSequence({
 		name : "changeBPM",
 		start:244,
-		stop:333,
+		stop:290,
 		onStart : (event) => {
 			sequencer.BPM = 89;
 		},

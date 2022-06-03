@@ -6,13 +6,16 @@
 \*----------------------------------------*/
 let audioPath = "./assets/audio/West Rules/Pulso & Romain Richard/End Of Utopia EP/05.Eternal Life.mp3";
 let sequencer;
-let bgColor = 0;
+let bgColor = 125;
+let Rr;
+let Gg;
+let Bb;
 
 function setup() {	
 	colorMode(RGB);
 	
 	frameRate(60);
-	createCanvas(window.innerWidth, window.innerHeight);
+	createCanvas(window.innerWidth, window.innerHeight, WEBGL);
 
 	sequencer = new Sequencer(audioPath, 132);
 	
@@ -20,16 +23,27 @@ function setup() {
 		name : "first",
 		start : 1,
 		stop : 10,
+		//définit une mesure comme 8 temps
+		measure: 8 ,
+		//fait agir sur les temps 1 et 3 et 7 de la mesure
+		steps : [1,3,5,7],
 		onStart : (event) => {
 			console.log(event)
+			
 		},
 		onStep : (event) => {
 			console.log(event)
-			if(bgColor==125){
-			bgColor = 0;
+			
+			if(Rr==50){
+			Rr = 250;
+			Gg = 100;
+			Bb = 150;
 			}else{
-				bgColor = 125;
+			Rr = 50;
+			Gg = 200;
+			Bb = 80;
 			}
+			background(Rr,Gg,Bb);
 		},
 		onStop : (event) => {
 			console.log(event)
@@ -50,6 +64,7 @@ function setup() {
 			}else{
 				bgColor = 125;
 			}
+			background(bgColor);
 		}
 		
 	});
@@ -75,7 +90,6 @@ function setup() {
 
 function draw(){
 	sequencer.update();
-	background(bgColor);
 	
 }
 
