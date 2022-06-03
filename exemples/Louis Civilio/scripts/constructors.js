@@ -7,6 +7,8 @@ let rotateYT;
 let rotateZT;
 
 function preload(){
+  //modèle trump utilisé est libre de droit, auteur : Denys Almaral
+  //trouvé ici : https://denysalmaral.com/2016/11/free-lowpoly-donald-trump-3d-character.html
 	trump = loadModel('./assets/trump.obj',true);
   trumpUV = loadImage('./assets/trumpcolors.png');
   bat = loadModel('./assets/bat.obj',true);
@@ -100,11 +102,15 @@ class trumpss{
     draw(){
         this.position.add(this.speed) ;
         push();
+        let XroT = random(1,2);
+        let YroT = random(1,2);
+        let ZroT = random(1,2);
+
         normalMaterial();
         translate(this.position.x, this.position.y, this.position.z);
-        rotateZ(frameCount * rotateZT);
-        rotateX(frameCount * rotateXT);
-        rotateY(frameCount * rotateYT);
+        rotateZ(frameCount * rotateZT * XroT);
+        rotateX(frameCount * rotateXT * YroT);
+        rotateY(frameCount * rotateYT * ZroT);
         texture(trumpUV);
         model(trump);
         pop();

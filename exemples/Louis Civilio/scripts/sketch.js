@@ -26,6 +26,10 @@ let cones = [];
 let bats = [];
 let trumpsBWArray = [];
 
+//backgroundcolors
+let bg = 20;
+
+
 //copie du array trumps pour les faire réapparaitre plus tard
 let trumpsFull = [];
 
@@ -143,7 +147,7 @@ function setup() {
 			trumps.push(new trumpss(0,0,0));
 			trumpsBWArray.push(new trumpUVText(0,0,0));
 
-			background(0,0,0);
+			background(bg,bg,bg);
 		},
 		onStop : (event) => {
 
@@ -160,7 +164,7 @@ function setup() {
 		onStep : (event) => {
 			trumps.push(new trumpss(0,0,0));
 
-			background(0,0,0);
+			background(bg,bg,bg);
 		},
 		onStop : (event) => {
 
@@ -192,9 +196,10 @@ function setup() {
 		onStep : (event) => {
 			trumps.push(new trumpss(0,0,0));
 
-			bats.push(new batss(0,0,0));
+			bats.push(new batss(-window.innerWidth/2,0,0));
+			bats.push(new batss(window.innerWidth/2,0,0));
 
-			background(0,0,0);
+			background(bg,bg,bg);
 		},
 		onStop : (event) => {
 
@@ -330,7 +335,7 @@ function draw(){
 
 	//reset le background en perma ou non
 	if (backgroundReset == 1){
-		background(0,0,0);
+		background(bg,bg,bg);
 	}
 	//apparitions des particules
 	for(let i = 0;i<particles.length;i++) {
