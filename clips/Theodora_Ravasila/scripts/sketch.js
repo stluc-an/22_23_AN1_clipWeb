@@ -53,7 +53,7 @@ sequencer = new Sequencer(audioPath, 132);
 		
 		onStep : (event) => {
 			console.log(event)
-				particules.push( new SuperParticule (0, 0, 0) );
+				particules.push( new Particulea (0, 0, 0) );
 				particules.push( new Particulei (0, 0, 0) );
 
 
