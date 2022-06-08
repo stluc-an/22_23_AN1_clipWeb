@@ -1,4 +1,45 @@
 
+class BasicParticule {
+	constructor(x, y, z){
+		this.position =  new p5.Vector(x, y, z);
+		this.speed = p5.Vector.random3D();
+	}
+	draw(){
+		this.position.add(this.speed);
+		translate (
+			this.position.x,
+			this.position.y,
+			this.position.z
+		);
+		plane(100, 100);
+	}
+}
+
+class SuperParticule extends BasicParticule{
+	constructor(x, y, z){
+		super(x, y, z);
+	}
+	draw(){
+		push();
+		ambientMaterial(170,100,34); 
+		super.draw();
+		pop();
+	}
+}
+class SuperParticule2 extends BasicParticule{
+	constructor(x, y, z){
+		super(x, y, z);
+	}
+	draw(){
+		push();
+		ambientMaterial(190,100,34); 
+		super.draw();
+		pop();
+	}
+}
+
+
+
 // brun clair
 class Particulei {
 	constructor(x, y, z){
@@ -15,7 +56,12 @@ class Particulei {
 			this.position.z
 		);
 		ambientMaterial(170,100,34); 
-		
+		/*
+		stroke(255-50, 255-180, 255-45);
+		noFill();
+		moStroke();
+		fill(r, g, b, a);
+*/
 		plane(100, 100);
 
 	pop();
@@ -63,7 +109,7 @@ class Particuleb {
 			this.position.z
 		);
 		ambientMaterial(50,180,45); 
-		
+
 		plane(100, 100);
 
 	pop();
@@ -95,6 +141,13 @@ class Particulec {
 
 	}
 }
+
+
+
+
+
+
+
 // rouge clair
 class Particuled {
 	constructor(x, y, z){
