@@ -35,7 +35,7 @@ createCanvas(window.innerWidth, window.innerHeight, WEBGL);
 
 mainCamera = createCamera();
 
-sequencer = new Sequencer(audioPath,132,false);
+sequencer = new Sequencer(audioPath,132);
 
 // mettre false apres 132 
 
@@ -228,11 +228,8 @@ sequencer.registerSequence({
 			console.log(event)
 			isCameraforward = true;
 		},
-		onStep : (event) => {
-			console.log(event)
+		
 				
-				particules.push( new Particulej (0, 0, 0) );
-		},
 		onStop : (event) => {
 			console.log(event)
 		isCameraforward= false;
@@ -243,7 +240,7 @@ sequencer.registerSequence({
 
 sequencer.registerSequence({
 		name : "neuf",
-		start : 235,
+		start : 236,
 		stop: 327,
 
 		onStart : (event) => {
@@ -286,7 +283,7 @@ sequencer.registerSequence({
 sequencer.registerSequence({
 		name : "onze",
 		start :400 ,
-		stop: 480,
+		stop: 460,
 
 		onStart : (event) => {
 			console.log(event)
@@ -307,7 +304,7 @@ sequencer.registerSequence({
 
 sequencer.registerSequence({
 		name : "douze",
-		start :460 ,
+		start :461 ,
 		stop: 480 ,
 
 		onStart : (event) => {
@@ -329,7 +326,7 @@ sequencer.registerSequence({
 
 sequencer.registerSequence({
 		name : "douze et demi",
-		start :480 ,
+		start :481 ,
 		stop: 535 ,
 
 		onStart : (event) => {
@@ -362,7 +359,7 @@ sequencer.registerSequence({
 			isCameraTurnAround = true;
 		},
 		
-	
+
 			
 	onStop : (event) => {
 			console.log(event)
@@ -383,7 +380,10 @@ sequencer.registerSequence({
 			console.log(event)
 			isCameraBounceUpAndDown = true;
 		},
-
+	onStep : (event) => {
+			console.log(event)
+				particules.push( new Particuleh (0, 0, 0) );
+			},
 	
 	onStop : (event) => {
 			console.log(event)
@@ -406,6 +406,8 @@ sequencer.registerSequence({
 OnStep : (event) => {
 			console.log(event)
 				particules.push( new Particuleb (0, 0, 0) );
+				particules.push( new Particulec (0, 0, 0) );
+
 		},
 
 	onStop : (event) => {
