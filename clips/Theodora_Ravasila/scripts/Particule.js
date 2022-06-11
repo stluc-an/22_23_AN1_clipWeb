@@ -15,7 +15,7 @@ class Particulei {
 			this.position.z
 		);
 		ambientMaterial(170,100,34); 
-		stroke(255-170,255-100,255-34);
+		
 		plane(100, 100);
 
 	pop();
@@ -39,7 +39,6 @@ class Particulea {
 			this.position.z
 		);
 		ambientMaterial(10,220,74); 
-		stroke (255-10,255-220,255-74);
 		
 		plane(100, 100);
 
@@ -63,7 +62,8 @@ class Particuleb {
 			this.position.y,
 			this.position.z
 		);
-		ambientMaterial(50,180,45); 
+		ambientMaterial(50,180,45);
+		
 /*
 		stroke(255-50, 255-180, 255-45);
 		noFill();
@@ -117,6 +117,8 @@ class Particuled {
 			this.position.z
 		);
 		ambientMaterial(57,199,29); 
+		
+		
 		
 		plane(100, 100);
 
@@ -216,7 +218,8 @@ class Particuleh {
 			this.position.y,
 			this.position.z
 		);
-		ambientMaterial(255,255,0); 
+		ambientMaterial(255,255,0);
+
 		
 		plane(100, 100);
 

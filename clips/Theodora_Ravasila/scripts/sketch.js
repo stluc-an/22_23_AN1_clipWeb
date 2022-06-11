@@ -35,9 +35,9 @@ createCanvas(window.innerWidth, window.innerHeight, WEBGL);
 
 mainCamera = createCamera();
 
-sequencer = new Sequencer(audioPath, 132);
+sequencer = new Sequencer(audioPath,132,false);
 
-
+// mettre false apres 132 
 
 
 
@@ -230,7 +230,7 @@ sequencer.registerSequence({
 		},
 		onStep : (event) => {
 			console.log(event)
-				particules.push( new Particuled (0, 0, 0) );
+				
 				particules.push( new Particulej (0, 0, 0) );
 		},
 		onStop : (event) => {
@@ -249,6 +249,7 @@ sequencer.registerSequence({
 		onStart : (event) => {
 			console.log(event)
 			isCameraMoveAroundandBounce = true;
+			particules.push( new Particule (0, 0, 0) );
 		},
 		
 		onStop : (event) => {
