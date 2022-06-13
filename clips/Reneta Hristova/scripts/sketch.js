@@ -17,7 +17,7 @@ function setup() {
 	frameRate(60);
 	createCanvas(window.innerWidth, window.innerHeight);
 
-	sequencer = new Sequencer(audioPath, 16); //mettre false en + pour faire disparaitre compteur
+	sequencer = new Sequencer(audioPath, 16,false); //mettre false en + pour faire disparaitre compteur
 	
 	sequencer.registerSequence({
 		name : "all",
