@@ -1,3 +1,3 @@
-Pulso et Romain Richard
-Eternal Life
-https://westrules.bandcamp.com/album/pulso-romain-richard-end-of-utopia-ep
+Sleaford Mods
+elocution
+https://tinoloaded.com/album-sleaford-mods-spare-ribs/
