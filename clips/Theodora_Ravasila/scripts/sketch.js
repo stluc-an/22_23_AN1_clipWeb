@@ -35,7 +35,7 @@ createCanvas(window.innerWidth, window.innerHeight, WEBGL);
 
 mainCamera = createCamera();
 
-sequencer = new Sequencer(audioPath,132);
+sequencer = new Sequencer(audioPath,132,false);
 
 // mettre false apres 132 
 
