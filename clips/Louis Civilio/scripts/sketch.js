@@ -47,6 +47,8 @@ let xCam;
 
 
 let mainCamera ;
+let camera2;
+let camera3;
 
 function preload(){
 	trump = loadModel('./assets/trump.obj',true);
@@ -64,10 +66,17 @@ function setup() {
 	mainCamera = createCamera();
 	mainCamera.setPosition(0, 0, 800);
 
+	/*
+	camera2 = createCamera();
+	camera2.setPosition(0,0,800);
+	camera3 = createCamera();
+	camera3.setPosition(0,200,-400);
+	*/
+
 	xCamAct = 0;
 	R = 800
 
-	sequencer = new Sequencer(audioPath, 145);
+	sequencer = new Sequencer(audioPath, 145, false);
 
 	for(let i = 0;i<width/10;i++){
 		particles.push(new Particle());
