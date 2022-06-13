@@ -1,3 +1,3 @@
-Pulso et Romain Richard
-Eternal Life
-https://westrules.bandcamp.com/album/pulso-romain-richard-end-of-utopia-ep
+Manuele PEPE
+Shadylay Italian Version
+https://youtu.be/kdOD9N_gsN8
