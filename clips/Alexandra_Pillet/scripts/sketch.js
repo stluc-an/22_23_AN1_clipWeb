@@ -65,13 +65,22 @@ function setup() {
 function draw(){
 	sequencer.update()}
 
-var snail = function draw(){
+//var snail = function draw(){
     //globalResult = ();
-	let circles = [...document.querySelectorAll(".circle")];
-    let count = 0;
-    
+	
     let rayon = 0;
-    let angle = 0;//frameCount *0.1;
+    let angle = 0; //frameCount * 0.1;
+    
+     let circles = [...document.querySelectorAll(".circle2")];
+     let count = 0;
+     for(let circle of circles){
+        circle.style.animationDelay = noise(count, 0)* 500+ "ms";
+        circle.style.left = noise(frameCount*0.01, count, 1)* width + 'px';
+        circle.style.top = noise(frameCount*0.01,count, 2)* height + 'px';
+         
+        }
+    /*let circles = [...document.querySelectorAll(".circle")];
+    let count = 0;
     for(let circle of circles){
 
         circle.style.animationDelay = noise(count, 0)* 500+ "ms";
@@ -82,21 +91,13 @@ var snail = function draw(){
         rayon += 30;
         angle += 0.8;
         
-        };
+        };*/
    // printIn(globalResult);
-    /*let circles2 = [...document.querySelectorAll(".circle2")];
-    let count = 0;
-    for(let circle of circles){
-        circle.style.animationDelay = noise(count, 0)* 500+ "ms";
-        circle.style.left = noise(frameCount*0.01, count, 1)* width + 'px';
-        circle.style.top = noise(frameCount*0.01,count, 2)* height + 'px';
-         
-        }*/
+   
     count++;
         
-}
 
-snail();
+/*snail();*/
 
 
 function windowResized(){
