@@ -1,3 +1,3 @@
-Pulso et Romain Richard
-Eternal Life
-https://westrules.bandcamp.com/album/pulso-romain-richard-end-of-utopia-ep
+Niko Rubio
+Go with you
+https://youtu.be/0dMv0KIkqAs-ep
