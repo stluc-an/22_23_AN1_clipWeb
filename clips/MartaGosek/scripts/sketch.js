@@ -174,13 +174,28 @@ sequencer.registerSequence({
 });
 
 sequencer.registerSequence({
-  name : "dix",
+  name : "vightetdeux",
   start : 123,
   stop : 126,
   steps : [ 1, 1+1/2 ],
   onStep : () => { 
     if(bgColor == 0){
         bgColor = 255;
+      }else{
+        bgColor = 0;
+      }
+
+  }
+}); 
+
+sequencer.registerSequence({
+  name : "dix",
+  start : 126,
+  stop : 157,
+  steps : [ 1, 1+1/2 ],
+  onStep : () => { 
+    if(bgColor == 0){
+        bgColor = color(150,0,150);
       }else{
         bgColor = 0;
       }
@@ -266,8 +281,17 @@ sequencer.registerSequence({
   name:"quinze",
   start: 251,
   stop : 283,
+  steps : [ 1, 1+1/2 ],
+  onStep : () => { 
+    if(bgColor == 0){
+        bgColor = color(150,0,150);
+      }else{
+        bgColor = 0;
+      }
+
+  }
   
-})
+});
 
 sequencer.registerSequence({
     name : "seize",
@@ -291,12 +315,12 @@ sequencer.registerSequence({
     steps : [2, 2+1/4],
     onStep : () => { 
     if(bgColor == 0){
-        bgColor = 255;
+        bgColor = color(0,100,0);
       }else{
         bgColor = 0;
       }
   }
-})
+});
 sequencer.registerSequence({
     name : "dixsept",
     start : 330,
@@ -304,7 +328,7 @@ sequencer.registerSequence({
     steps : [ 2, 1+1/4 ],
   onStep : () => { 
     if(bgColor == 0){
-        bgColor = 255;
+        bgColor = color(0,200,0);
       }else{
         bgColor = 0;
       }
@@ -317,12 +341,26 @@ sequencer.registerSequence({
     steps : [ 1, 1+1/4 ],
   onStep : () => { 
     if(bgColor == 0){
-        bgColor = 255;
+        bgColor = color(10,200,10);
       }else{
         bgColor = 0;
       }
   }
   });
+sequencer.registerSequence({
+  name : "vingtettrois",
+  start : 376,
+  stop : 407,
+  steps : [ 1, 1+1/2 ],
+  onStep : () => { 
+    if(bgColor == 0){
+        bgColor = color(150,0,150);
+      }else{
+        bgColor = 0;
+      }
+
+  }
+}); 
 
 sequencer.registerSequence({
     neme : "dixneuf",
@@ -331,13 +369,13 @@ sequencer.registerSequence({
     steps : [4, 1+2/3],
   onStep : () => { 
     if(bgColor == 0){
-        bgColor = 255;
+        bgColor = color(0,0,200);
       }else{
         bgColor = 0;
       }
   }
 
-})
+});
 sequencer.registerSequence({
   name : "vingt",
   start : 439,
@@ -356,7 +394,7 @@ sequencer.registerSequence({
 sequencer.registerSequence({
     name : "vightetun",
     start : 471,
-    stop : 475,
+    stop : 474,
 
     onStart : (event) => {
       console.log(event)
@@ -443,17 +481,17 @@ function CrazyLightBas(color, rZ, rX){
 
       push();
       translate(-350, -height/2);
-      CrazyLight(color(200, 0, 100), millis()/-10000, millis()/-1511);
+      CrazyLight(color(10,200,10), millis()/-10000, millis()/-1511);
       pop();
 
       push();
       translate(350, -height/2);
-      CrazyLight(color(0), millis()/10000, millis()/1511);
+      CrazyLight(color(0), millis()/-10000, millis()/-1511);
       pop();
 
       push();
       translate(350, -height/2);
-      CrazyLight(color(200, 0, 100), millis()/10000, millis()/1511);
+      CrazyLight(color(10,200,10), millis()/10000, millis()/1511);
       pop();
 
       push();
@@ -478,7 +516,7 @@ function CrazyLightBas(color, rZ, rX){
 
       push();
       translate(400,height/4)
-      CrazyLightBas(color(50,200,50), millis()/12345,millis()/98765);
+      CrazyLightBas(color(150, 0, 150), millis()/12345,millis()/98765);
       pop();
 
       push();
@@ -488,7 +526,7 @@ function CrazyLightBas(color, rZ, rX){
 
        push();
       translate(-400,height/4)
-      CrazyLightBas(color(50,200,50), millis()/12345,millis()/98765);
+      CrazyLightBas(color(150, 0, 150), millis()/12345,millis()/98765);
       pop();
 
       
