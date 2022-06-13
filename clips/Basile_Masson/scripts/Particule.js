@@ -122,4 +122,40 @@ class Bulle{
 
 }
 
+class paparle{
+    constructor(x,y,z){
+        this.position = new p5.Vector(x,y,z);
+        this.speed = p5.Vector.random3D();
+        
+    
+    }
+    draw(){
+        this.position.add(this.speed);
+    
+       
+        
+        push();
+        
+        translate(this.position.x,
+                  this.position.y,
+                  this.position.z);
+       
+        
+        image(img,-25,-50,70,70);
+        
+        boucheY = random(19, 25);
+        
+        push();
+        translate(0, boucheY);
+        image(bouche,-18,0,50,25);
+        pop();
+        
+        pop(); 
+         
+        
+      
+    }
+    
+}
+
 

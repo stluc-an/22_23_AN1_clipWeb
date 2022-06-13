@@ -1,13 +1,14 @@
 
 
 let audioPath = "./assets/audio/sleafordmods/Sleaford Mods - Elocution.mp3";
-let sequencer; 
+let sequencer ; 
 let img ;
 let bouche ;
 let you ;
 let bouger =[];
 let particules = [];
 let bulle = [];
+let poparle = [];
 let Toi = false;
 let mainCamera;
 let tourne = false;
@@ -15,8 +16,11 @@ let hasTodisplayImg = false;
 let logoDer = false; 
 let cam = false; 
 let cam2 = false;
+let cam3 = false;
+let cam4 = false;
 let You = false;
 let back = false;
+let back2 = false;
 let logoS = false;
 let Rr = 255;
 let G = 204;
@@ -40,13 +44,13 @@ function setup() {
         let d = random(10,40);
         image(you,x,y,d);
     }
-      
+      back = true;
      	 mainCamera = createCamera();
     mainCamera.setPosition(0,0,200);
     mainCamera.lookAt(0,0,0);
 
-	sequencer = new Sequencer(audioPath, 161);
-
+	sequencer = new Sequencer(audioPath,161,false );
+        
 	sequencer.registerSequence({
    
 		name : "boules",
@@ -54,7 +58,7 @@ function setup() {
         stop :20 ,
 		onStart : (event) => {
 			console.log(event)
-           back = true
+           back = true;
         
 		},
 		onStep : (event) => {
@@ -128,6 +132,7 @@ function setup() {
 		onStop : (event) => {
 			console.log(event)
             logoDer = false;
+            //cam=false;
 		},
 		
 	});
@@ -139,8 +144,8 @@ function setup() {
         stop :120 ,
 		onStart : (event) => {
 			console.log(event)
-         tourne = true;
-            
+         
+          cam = true;   
 		},
 		onStep : (event) => {
 			console.log(event)
@@ -151,7 +156,7 @@ function setup() {
 		},
 		onStop : (event) => {
 			console.log(event)
-           
+           //cam = false; 
 		},
 		
 	});
@@ -162,7 +167,7 @@ function setup() {
         stop :129 ,
 		onStart : (event) => {
 			console.log(event)
-         tourne = true;
+         cam = true;
             
 		},
 		onStep : (event) => {
@@ -171,7 +176,7 @@ function setup() {
 		},
 		onStop : (event) => {
 			console.log(event)
-            tourne = false;
+            
             cam = false;
             cam2= true;
 		},
@@ -288,7 +293,7 @@ function setup() {
 		onStart : (event) => {
 			console.log(event)
             fill(255,50,30);
-            
+            back = true;
            hasTodisplayImg = true;
            
 		},
@@ -300,6 +305,7 @@ function setup() {
             
             hasTodisplayImg = false;
             clear();
+        
 		},
 		
 	});
@@ -373,7 +379,7 @@ function setup() {
 		onStart : (event) => {
 			console.log(event)
             back = false ;
-            cam = true;
+            cam3 = true;
 		},
 		onStep : (event) => {
 			console.log(event)
@@ -392,7 +398,7 @@ function setup() {
 		},
 		onStop : (event) => {
 			console.log(event)
-          
+          cam3 = false;
 		},
 		
 	});
@@ -410,7 +416,7 @@ function setup() {
             fill(Rr,G,B);
             particules.push( new Particule(0,0,0) );
             
-            bouger.push( new Bouge);
+            
           
           if(Rr == 255){
                Rr = 255;
@@ -425,7 +431,7 @@ function setup() {
 		},
 		onStop : (event) => {
 			console.log(event)
-          
+          cam = false;
 		},
 		
 	});
@@ -436,7 +442,7 @@ name : "clignotte23",
 		onStart : (event) => {
 			console.log(event)
             back = false ;
-            cam = true;
+            cam3 = true;
 		},
 		onStep : (event) => {
 			console.log(event)
@@ -455,7 +461,7 @@ name : "clignotte23",
 		},
 		onStop : (event) => {
 			console.log(event)
-        cam = false;
+        cam3 = false;
            back = true;  
 		},
 		
@@ -506,7 +512,8 @@ name : "clignotte23",
 			console.log(event)
             
             
-            bulle.push( new Bulle(random(-100,100),150,0) );
+            bulle.push( new Bulle(random(-200,-100),150,0) );
+            bulle.push( new Bulle(random(100,200),150,0) );
             
 		},
 		onStop : (event) => {
@@ -643,7 +650,7 @@ name : "clignotte23",
    
 		name : "pop5",
         start : 411,
-        stop :430 ,
+        stop :421 ,
 		onStart : (event) => {
 			console.log(event)
          tourne = true;
@@ -666,18 +673,69 @@ name : "clignotte23",
     
     sequencer.registerSequence({
    
-		name : "lologo",
-        start : 469,
-        stop :485 ,
+		name : "pop6",
+        start : 422,
+        stop :440 ,
 		onStart : (event) => {
 			console.log(event)
-        logoS = true;
+         
+            
+		},
+		onStep : (event) => {
+			console.log(event)
+            poparle.push( new paparle);
+             
+            
+            
+		},
+		onStop : (event) => {
+			console.log(event)
+            
+		},
+		
+	});
+    
+    sequencer.registerSequence({
+   
+		name : "lologo",
+        start : 469,
+        stop :470 ,
+		onStart : (event) => {
+			console.log(event)
+            
+        
+            back2 = true;
+            
             
 		},
 		onStep : (event) => {
 			console.log(event)
         
-           
+            
+		},
+		onStop : (event) => {
+			console.log(event)
+    
+		},
+		
+	});
+    
+    sequencer.registerSequence({
+   
+		name : "lologo",
+        start : 471,
+        stop :485 ,
+		onStart : (event) => {
+			console.log(event)
+            
+        logoS = true;
+            back2 = true;
+            
+            
+		},
+		onStep : (event) => {
+			console.log(event)
+        
             
 		},
 		onStop : (event) => {
@@ -694,7 +752,9 @@ function draw(){
     if(back){
       background(Rr,G,B);  
     }
-    
+    if(back2){
+      background(255,204,0);  
+    }
   
      bouger.forEach((particule)=>{
       particule.draw();  
@@ -706,17 +766,29 @@ function draw(){
     particules.forEach((particule)=>{
       particule.draw();  
     });
+    poparle.forEach((particule)=>{
+      particule.draw();  
+    });
+    
     
 	
- let R = 800;
+    let R = 800;
     let x = R * cos(millis()/250);
     let z = R * sin(millis()/1000);
-    
+    let y = R * sin(millis()/500);
     if (cam2){
          mainCamera.setPosition(0,0,200);
     mainCamera.lookAt(0,0,0); 
     }
     
+    if (cam3){
+         mainCamera.setPosition(x,y,z);
+    mainCamera.lookAt(200,0,0); 
+    }
+     if (cam4){
+         mainCamera.setPosition(x,50,z);
+    mainCamera.lookAt(200,100,0); 
+    }
     if (cam){
     mainCamera.setPosition(x,50,z);
     mainCamera.lookAt(0,0,0);
@@ -755,7 +827,7 @@ function draw(){
         image(you,-150,-130,300,435);
     }
     
-  if(logoS){
+    if(logoS){
       translate(0,0);
      image(logoSleaford,-70,-50,150,100); 
   }
