@@ -1,3 +1,3 @@
-Pulso et Romain Richard
-Eternal Life
-https://westrules.bandcamp.com/album/pulso-romain-richard-end-of-utopia-ep
+King Eyes (feat UnityTX)
+Fuck a Proud Boy 
+https://www.youtube.com/watch?v=GRMcaPDrbqw
