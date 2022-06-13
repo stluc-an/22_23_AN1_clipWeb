@@ -59,14 +59,14 @@ function setup() {
 			console.log(event)
 		},
 		
-	});     
+	});   
 }
  
 function draw(){
 	sequencer.update()}
 
 var snail = function draw(){
-    globalResult = ();
+    //globalResult = ();
 	let circles = [...document.querySelectorAll(".circle")];
     let count = 0;
     
@@ -83,7 +83,7 @@ var snail = function draw(){
         angle += 0.8;
         
         };
-    printIn(globalResult);
+   // printIn(globalResult);
     /*let circles2 = [...document.querySelectorAll(".circle2")];
     let count = 0;
     for(let circle of circles){
