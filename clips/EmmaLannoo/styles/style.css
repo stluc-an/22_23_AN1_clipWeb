@@ -4,7 +4,11 @@
 * @Last Modified by:   ogre
 * @Last Modified time: 2021-03-29 15:17:33
 */
+
+
 html, body {
+    margin: 0;
+	padding: 0;
 	padding: 0;
 	margin: 0;
 	width: 100%;

@@ -1,3 +1,3 @@
-Pulso et Romain Richard
-Eternal Life
-https://westrules.bandcamp.com/album/pulso-romain-richard-end-of-utopia-ep
+Keiichi Suzuki and Hirokazu Tanaka.
+Sanctuary Guardian
+https://www.youtube.com/watch?v=bUMyApoEeb0
