@@ -4,6 +4,9 @@ let anim1;
 let audioPath = "./assets/audio/sha.mp3";
 let sequencer;
 let bgColor = 0;
+let pepe;
+ 
+
 
 let mainCamera;
 let particules = [];
@@ -17,20 +20,27 @@ let isCameraBounceUpAndDown = false;
 let isCameraforward = false  
 
 
-//function preload(){
+function preload(){
 	//anim1 = new Anim("./image/G__CHIFFRE_.PNG", 19);
     
-//}
+  pepe = loadModel('assets/pepe.obj', true);
+  
+}
+
 
 function setup() {	
 	colorMode(RGB);
+     
+    createCanvas(100, 100, WEBGL);
 	
 	frameRate(60);
 	createCanvas(window.innerWidth, window.innerHeight, WEBGL);
 	mainCamera = createCamera();
-	mainCamera.setPosition(0,50,800);
+  
+	mainCamera.setPosition(0,0,800);
 	mainCamera.lookAt(0,0,0);
-    
+	
+	
    
 	
 
@@ -58,23 +68,37 @@ function setup() {
 		name : "onTime",
 		start : 1,
 		stop : 10,
+        steps : [
+			1,
+			1+1/8,
+			1+2/8,
+			1+3/8,
+			1+4/8,
+			1+5/8,
+			1+6/8,
+			1+7/8,
+		],
 		onStep : (event) => {
 			bgColor = 255 - random(bgColor) * bgColor;
-		}
+		},
+        onStart : (event) => {
+			console.log(event)
+            camZ = 800
+		},
+        onStop : (event) => {
+			console.log(event)
+            camZ = 0;
+		},
 	});
     
 	sequencer.registerSequence({
 		name : "all",
-		onStart : (event) => {
-			console.log(event)
-		},
+		
 		onStep : (event) => {
 			console.log(event)
 			particules.push( new Particule (random(0),0,0) ) ;
 		},
-		onStop : (event) => {
-			console.log(event)
-		},
+		
 		
 	});
     
@@ -94,8 +118,15 @@ function setup() {
 		],
 		onStep : (event) => {
 			bgColor = (event.amount * 255);
+            speedcamZ = 0.1;
             
-		}
+		}, 
+		onStop : (event) => {
+			console.log(event)
+			camZ = 0
+		},
+      
+      
 	});
 	
     
@@ -277,7 +308,7 @@ function setup() {
 		stop:42,
 		onStart : (event) => {
 			console.log(event)
-			isCameraTurnLeft = true ;
+			isCameraBounceUpAndDown = true ;
 
 		},
 		onStep : (event) => {
@@ -286,7 +317,7 @@ function setup() {
 		},
 		onStop : (event) => {
 			console.log(event)
-			isCameraTurnLeft = false;
+			isCameraBounceUpAndDown = false;
 		},
                 });
     
@@ -1246,13 +1277,1247 @@ function setup() {
 		},
                 });
     
+     sequencer.registerSequence({
+                 
+		name : "86",
+		start:86, 
+		stop:86,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "87",
+		start:87, 
+		stop:87,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "88",
+		start:88, 
+		stop:88,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "89",
+		start:89, 
+		stop:89,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+      sequencer.registerSequence({
+                 
+		name : "90",
+		start:90, 
+		stop:90,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "91",
+		start:91, 
+		stop:91,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "92",
+		start:92, 
+		stop:92,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+      sequencer.registerSequence({
+                 
+		name : "125",
+		start:125, 
+		stop:125,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "  126",
+		start:125, 
+		stop:125,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
     
     
     
     
+      sequencer.registerSequence({
+                 
+		name : "127",
+		start:127, 
+		stop:127,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "128",
+		start:128, 
+		stop:128,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+   
+    sequencer.registerSequence({
+                 
+		name : "129",
+		start:129, 
+		stop:129,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "130",
+		start:130, 
+		stop:130,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "131",
+		start:131, 
+		stop:131,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "132",
+		start:132, 
+		stop:132,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "133",
+		start:133, 
+		stop:133,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "134",
+		start:134, 
+		stop:134,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    sequencer.registerSequence({
+                 
+		name : "133",
+		start:133, 
+		stop:133,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "134",
+		start:134, 
+		stop:150,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "136",
+		start:136, 
+		stop:136,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "137",
+		start:137, 
+		stop:137,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "136",
+		start:136, 
+		stop:136,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "138",
+		start:138, 
+		stop:138,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ; 
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "139",
+		start:139, 
+		stop:139,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "140",
+		start:140, 
+		stop:140,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ; 
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "141",
+		start:141, 
+		stop:141,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "142",
+		start:142, 
+		stop:142,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ; 
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "143",
+		start:143, 
+		stop:143,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "144",
+		start:144, 
+		stop:144,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "145",
+		start:145, 
+		stop:145,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "146",
+		start:146, 
+		stop:146,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "147",
+		start:147, 
+		stop:147,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+      sequencer.registerSequence({
+                 
+		name : "148",
+		start:148, 
+		stop:148,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+      sequencer.registerSequence({
+                 
+		name : "149",
+		start:149, 
+		stop:149,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "150",
+		start:150, 
+		stop:150,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "182",
+		start:182, 
+		stop:185,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "185",
+		start:185, 
+		stop:188,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "188",
+		start:188, 
+		stop:191,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "191",
+		start:191, 
+		stop:194,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+      sequencer.registerSequence({
+                 
+		name : "194",
+		start:194, 
+		stop:197,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "197",
+		start:197, 
+		stop:200,
+		onStart : (event) => {
+			console.log(event)
+			isCameraTurnLeft = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraTurnLeft = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "200",
+		start:200, 
+		stop:210,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "210",
+		start:210, 
+		stop:215,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
     
     
     
+     sequencer.registerSequence({
+                 
+		name : "240",
+		start:240, 
+		stop:240,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "241",
+		start:241, 
+		stop:241,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "240",
+		start:240, 
+		stop:240,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "242",
+		start:242, 
+		stop:242,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "243",
+		start:243, 
+		stop:243,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+      sequencer.registerSequence({
+                 
+		name : "244",
+		start:244, 
+		stop:244,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "245",
+		start:245, 
+		stop:245,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "246",
+		start:246, 
+		stop:246,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "247",
+		start:247, 
+		stop:247,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "248",
+		start:248, 
+		stop:248,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "249",
+		start:249, 
+		stop:249,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "250",
+		start:250, 
+		stop:250,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    sequencer.registerSequence({
+                 
+		name : "251",
+		start:251, 
+		stop:251,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "252",
+		start:252, 
+		stop:252,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+    sequencer.registerSequence({
+                 
+		name : "253",
+		start:253, 
+		stop:253,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "254",
+		start:254, 
+		stop:254,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
+    
+    
+     sequencer.registerSequence({
+                 
+		name : "255",
+		start:255, 
+		stop:255,
+		onStart : (event) => {
+			console.log(event)
+			isCameraRight = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraRight = false;
+		},
+                });
+    
+     sequencer.registerSequence({
+                 
+		name : "256",
+		start:256, 
+		stop:256,
+		onStart : (event) => {
+			console.log(event)
+			isCameraSpinAround = true ;
+
+		},
+		onStep : (event) => {
+			console.log(event)
+			particules.push( new Particule (0,0,0) ) ;
+		},
+		onStop : (event) => {
+			console.log(event)
+			isCameraSpinAround = false;
+		},
+                });
     
     
 	}
@@ -1260,46 +2525,26 @@ function setup() {
 
 
 
-
-
+//let camZ = 0;
+//let speedcamZ = 0;
 // attention si t'as eu des messages d'erreurs c'est peut etre parce que t'avais oublié de fermer des parentheses
 
 
 function draw(){
-sequencer.update();
-background(0, bgColor, 100); // ici ca rejoint le "let blabla" de en haut. en gros c'est ici que tu définis les camera
+    mainCamera.setPosition(0,0,800);
+	mainCamera.lookAt(0,0,0);
+    
+   // camZ+= speedcamZ;
+    sequencer.update();
+    background(0, bgColor, 100); // ici ca rejoint le "let blabla" de en haut. en gros c'est ici que tu définis les camera
  	// je suis sûr à 100% que celles là elles fonctionnent mais tu peux en créer d'autres si tu veux
+    rotate(PI / 1);;
+    normalMaterial(random); // For effect
+    model(pepe);
     
- //   anim1.draw();
-   
- 
     
-    class Anim{
-	constructor(seqName, count){
-		this.imgsPath = seqName;
-		this.imgs =[];
-		this.cursor = 0;
-		this.isPlaying = false;
-
-		for(let i = 1 ; i <= count ; i++){
-			let realPath = this.imgsPath.replace("_NUMBER_", i );
-			let tempImg = loadImage(realPath);
-			this.imgs.push(tempImg);
-		}
-	}
-	draw(){
-		if(this.isPlaying == true){
-			let i = floor(this.cursor);
-			image(this.imgs[i], 0, 0, width, height);
-		}
-	}
-	setCursor(amount){
-		amount = min(1, max(0, amount));
-		this.cursor = lerp( 0, this.imgs.length -1, amount)
-	}
-}
-    
- if(isCameraTurnAround){
+        
+    if(isCameraTurnAround){
 	let R = 800;
 	let x = R * cos(millis()/1000);
 	let z = R * sin(millis()/1000);
@@ -1358,7 +2603,43 @@ background(0, bgColor, 100); // ici ca rejoint le "let blabla" de en haut. en gr
   	
 }
 
+   
+
+
+    
+
+
+
+
+
 function windowResized(){
 	resizeCanvas(window.innerWidth, window.innerHeight);
 }
 
+
+
+
+class Anim{
+    constructor(seqName, count){
+        this.imgsPath = seqName;
+        this.imgs =[];
+        this.cursor = 0;
+        this.isPlaying = false;
+
+        for(let i = 1 ; i <= count ; i++){
+            let realPath = this.imgsPath.replace("_NUMBER_", i );
+            let tempImg = loadImage(realPath);
+            this.imgs.push(tempImg);
+        }
+    }
+    draw(){
+        if(this.isPlaying == true){
+            let i = floor(this.cursor);
+            image(this.imgs[i], 0, 0, width, height);
+        }
+    }
+    setCursor(amount){
+        amount = min(1, max(0, amount));
+        this.cursor = lerp( 0, this.imgs.length -1, amount)
+    }
+}
