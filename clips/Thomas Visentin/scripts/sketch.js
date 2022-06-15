@@ -6,7 +6,7 @@
 \*----------------------------------------*/
 
 
-let audioPath = "./assets/audio/dubstepkyoka-n.mp3";
+let audioPath = "./assets/audio/Once Upon a December {Slowed}.mp3";
 let startX;
 let startY;
 let endX;
@@ -26,14 +26,14 @@ let b;
 function setup() {	
 	 createCanvas(window.innerWidth, window.innerHeight);
     	
-    sequencer = new Sequencer(audioPath, 132, false);
+    sequencer = new Sequencer(audioPath, 130, false);
   
   startX = random(width);
   startY = random(height);
   endX = random(width);
   endY = random(height);
   
-  const range = 5;
+  const range = 1;
   deltaStartX = random(-10, 10);
   deltaStartY = random(-10, 10);
   deltaEndX = random(-10, 10);
