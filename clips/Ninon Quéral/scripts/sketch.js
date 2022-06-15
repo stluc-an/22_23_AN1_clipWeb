@@ -37,6 +37,8 @@ function preload() {
 
 
 function setup() {	
+	
+	
     
     createCanvas(100,100, WEBGL);
     
@@ -50,7 +52,7 @@ function setup() {
     mainCamera = createCamera(); 
     mainCamera.setPosition(0,0,800); 
     mainCamera.lookAt(0,0,0)
-	sequencer = new Sequencer(audioPath, 132);
+	sequencer = new Sequencer(audioPath, 132, false);
 	
 	sequencer.registerSequence({
 		name : "all",
@@ -71,6 +73,9 @@ function setup() {
 	}
 
 function draw(){
+	
+	sequencer.update();
+
    
     background(200,200,150);
     push();
