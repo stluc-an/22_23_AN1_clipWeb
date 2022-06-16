@@ -49,6 +49,7 @@ let xCam;
 let mainCamera ;
 let camera2;
 let camera3;
+let camChanger = 0;
 
 function preload(){
 	trump = loadModel('./assets/trump.obj',true);
@@ -65,18 +66,19 @@ function setup() {
 
 	mainCamera = createCamera();
 	mainCamera.setPosition(0, 0, 800);
-
-	/*
 	camera2 = createCamera();
-	camera2.setPosition(0,0,800);
+	camera2.setPosition(0,0,100);
+	camera2.lookAt(0, 500, 500);
 	camera3 = createCamera();
-	camera3.setPosition(0,200,-400);
-	*/
+	camera3.setPosition(0,300,-300);
+	camera3.lookAt(0, 100, 100);
 
 	xCamAct = 0;
 	R = 800
+	
+	setCamera(mainCamera);
 
-	sequencer = new Sequencer(audioPath, 145, false);
+	sequencer = new Sequencer(audioPath, 145);
 
 	for(let i = 0;i<width/10;i++){
 		particles.push(new Particle());
@@ -100,6 +102,8 @@ function setup() {
 			rActivate = 0;
 
 			xCamAct = 0;
+
+			setCamera(mainCamera);
 
 		},
 		onStep : (event) => {
@@ -127,7 +131,6 @@ function setup() {
 
 			//réactive la rotation de caméra (sur 1 elle est active)
 			rActivate = 1;
-
 			normalMaterial();
 		},
 		onStep : (event) => {
@@ -152,6 +155,7 @@ function setup() {
 		stop: 98,
 		onStart : (event) => {
 			xCamAct = 1;
+			setCamera(mainCamera);
 		},
 		onStep : (event) => {
 			trumps.push(new trumpss(0,0,0));
@@ -210,6 +214,14 @@ function setup() {
 			bats.push(new batss(window.innerWidth/2,0,0));
 
 			background(bg,bg,bg);
+
+			if(camChanger == 0 ){
+				setCamera(camera2);
+				camchanger = 1;
+			} else {
+				setCamera(camera3);
+				camchanger = 0;
+			}
 		},
 		onStop : (event) => {
 
@@ -223,6 +235,7 @@ function setup() {
 		onStart : (event) => {
 			backgroundReset = 1;
 			trumps.push(new trumpss(0,0,0));
+			setCamera(mainCamera);
 		},
 		onStep : (event) => {
 			trumpsBWArray.push(new trumpOnlyUv(0,0,0));
@@ -272,6 +285,7 @@ function setup() {
 		stop: 244,
 		onStart : (event) => {
 			backgroundReset = 1;
+			setCamera(camera3);
 		},
 		onStep : (event) => {
 			trumps.push(new trumpss(0,0,0));
@@ -293,6 +307,7 @@ function setup() {
 			sequencer.BPM = 89;
 			xCamAct = 1;
 			rActivate = 0;
+			setCamera(mainCamera);
 		},
 		onStep : (event) => {
 			cones.push(new coneCcol(0,0,0));
