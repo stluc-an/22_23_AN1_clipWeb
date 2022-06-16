@@ -19,7 +19,7 @@ function setup() {
 	sequencer.registerSequence({
         name : "intro",
         start:1,
-        stop:10,
+        stop:159,
 		onStart : (event) => {
             document.querySelector(".circleWrapper").classList.add("anim") 
             circles = true;
@@ -39,7 +39,7 @@ function setup() {
 	});
     
     	
-	sequencer.registerSequence({
+	/*sequencer.registerSequence({
         name : "second",
         start:11,
         stop:20,
@@ -59,43 +59,45 @@ function setup() {
 			console.log(event)
 		},
 		
-	});   
+	});*/   
 }
  
 function draw(){
-	sequencer.update()}
+	sequencer.update()
 
 //var snail = function draw(){
     //globalResult = ();
 	
-    let rayon = 0;
-    let angle = 0; //frameCount * 0.1;
+    //let rayon = 0;
+    //let angle = 0; 
+    //frameCount * 0.1;
     
-     let circles = [...document.querySelectorAll(".circle2")];
+     /*let circles = [...document.querySelectorAll(".circle")];
      let count = 0;
      for(let circle of circles){
         circle.style.animationDelay = noise(count, 0)* 500+ "ms";
         circle.style.left = noise(frameCount*0.01, count, 1)* width + 'px';
         circle.style.top = noise(frameCount*0.01,count, 2)* height + 'px';
-         
-        }
-    /*let circles = [...document.querySelectorAll(".circle")];
+        }*/
+
+    let rayon = 6;
+    let angle = 0;
+    let circles = [...document.querySelectorAll(".circle")];
     let count = 0;
     for(let circle of circles){
 
-        circle.style.animationDelay = noise(count, 0)* 500+ "ms";
+        circle.style.animationDelay = noise(count, 0)* 800+ "ms";
         
         circle.style.left = width/2 + rayon * cos(angle) + "px";
         circle.style.top = height/2 + rayon * sin(angle) + "px";
+        rayon = 100;
+        angle = 0.8;
         
-        rayon += 30;
-        angle += 0.8;
-        
-        };*/
+        };
    // printIn(globalResult);
    
     count++;
-        
+}
 
 /*snail();*/
 

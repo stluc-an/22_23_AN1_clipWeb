@@ -22,15 +22,15 @@ body {
   height: 100px;
   width: 50px;
   border-radius: 100%;
- 
   transform: rotate(30deg);
   position: absolute;
+
 }
 
 .circleWrapper{
-  
     transform-origin: center;
     height: 100%;
+    /*width: 100%;*/
 }
 
 @keyframes rotation {
@@ -48,9 +48,9 @@ body {
     50%  {background-color: orangered;}
     60%  {background-color: orange;}
     70% {background-color: yellow;}
-    80% {background-color: yellowgreen}
-    90% {background-color: green}
-    100% {background-color: #0d98ba}
+    80% {background-color: yellowgreen;}
+    90% {background-color: green;}
+    100% {background-color: #0d98ba;}
 }
 
 
@@ -66,14 +66,14 @@ body {
 
 
 
-.circleWrapper.anim2{
-    animation: rotation2 1.5s infinite linear;
+.circleWrapper.anim21{
+    animation: rotation21 1.5s infinite linear;
 }
-.circleWrapper.anim .circle2{
+.circleWrapper.anim .circle21{
     animation: rotation 1.5s infinite linear;
 }
 
-.circle2 {
+.circle21 {
   height: 100px;
   width: 50px;
   border-radius: 100%;
@@ -82,13 +82,13 @@ body {
   position: absolute;
 }
 
-.circleWrapper2{
+.circleWrapper21{
   
     transform-origin: center;
     height: 100%;
 }
 
-@keyframes rotation {
+@keyframes rotation21 {
   from {
     transform: rotate(0deg);
   }
@@ -109,7 +109,7 @@ body {
 }
 
 
-@keyframes rotation2 {
+@keyframes rotation22 {
   from {
     transform: rotate(0deg);
   }
