@@ -19,7 +19,7 @@ function setup() {
 	frameRate(60);
 	createCanvas(window.innerWidth, window.innerHeight);
 
-  sequencer = new Sequencer(audioPath, 132);
+  sequencer = new Sequencer(audioPath, 132,false);
 
 	sequencer.registerSequence({
     name : "un",
