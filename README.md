@@ -1,6 +1,6 @@
-[Dickson Experimental Sound Film (1894)](https://www.youtube.com/watch?v=SwIcRSvQ_TY) est ce que l’on pourrait appeler le premier clip de l’histoire. C’est en fait le premier film sur un morceau de musique et c’est aussi le premier film sonorisé de l’histoire (30 ans avant le cinéma parlant). La musique est une ritournelle composée par un Français de l’époque, Robert Planquette. Le violoniste présent dans cet enregistrement est William Dickson, un génie, un pionnier du cinéma et l’inventeur avec Thomas Edison d’une machine à clip qu’on appelle phonokinétoscope.
+[Dickson Experimental Sound Film (1894)](https://www.youtube.com/watch?v=D4iDmA1seBk) est ce que l’on pourrait appeler le premier clip de l’histoire. C’est en fait le premier film sur un morceau de musique et c’est aussi le premier film sonorisé de l’histoire (30 ans avant le cinéma parlant). La musique est une ritournelle composée par un Français de l’époque, Robert Planquette. Le violoniste présent dans cet enregistrement est William Dickson, un génie, un pionnier du cinéma et l’inventeur avec Thomas Edison d’une machine à clip qu’on appelle phonokinétoscope.
 
-L’idée indispensable au développement du cinéma et du clip vidéo est née dans la tête d’une secrétaire française deux ans plus tard. Par la mise en œuvre de cette production [La Fée aux choux (1896)](https://www.youtube.com/watch?v=8d7FXY6veHk&ab_channel=iconauta), Alice Guy devient la toute première réalisatrice de l’histoire. Il s’agissait tout simplement d’utiliser cette toute récente invention, la caméra, pour raconter des histoires.  
+L’idée indispensable au développement du cinéma et du clip vidéo est née dans la tête d’une secrétaire française deux ans plus tard. Par la mise en œuvre de cette production [La Fée aux choux (1896)](https://www.youtube.com/watch?v=qS22S5MTHoI), Alice Guy devient la toute première réalisatrice de l’histoire. Il s’agissait tout simplement d’utiliser cette toute récente invention, la caméra, pour raconter des histoires.  
 
 Pour entrer plus en profondeur dans cette histoire je vous envoie vers wikipedia : https://fr.wikipedia.org/wiki/Clip
 Je ne résiste néanmoins pas à vous proposer ces 12 courts films musicaux.
@@ -33,10 +33,10 @@ Malgré l’absence de dimension musical, mais non moins poétique qu’une chan
 Aussi, il pourrait certainement être enrichissant d’utiliser certaines des spécificités de la technique qui vous est imposée. Juste pour vous donner un exemple, un site web peut afficher un autre site web. Et donc il faut que vous découvrirez le [WebJing de Anne Roquigny](https://www.youtube.com/watch?v=qXTOxc2zh60) [archive iMAL contenants de vieilles photos de vos profs favoris](https://legacy.imal.org/fr/node/158) 
 
 Une autre pratique du code, de la musique et de l’image associé est l’obscure scène du live coding
-[Introduction to Live Coding Music and Visuals](https://www.youtube.com/watch?v=-QY2x6aZzqc)
-[Olivia Jack - Hydra, Live Coding Visuals in the Browser](https://www.youtube.com/watch?v=cw7tPDrFIQg) : [hydra](https://hydra.ojack.xyz/?sketch_id=eerie_ear_0)
-[Orca by Rekka & Devine ](https://hundredrabbits.itch.io/orca)
-[Algorave Generation | Resident Advisor](https://www.youtube.com/watch?v=S2EZqikCIfY&ab_channel=ResidentAdvisor)
+* [Introduction to Live Coding Music and Visuals](https://www.youtube.com/watch?v=-QY2x6aZzqc)
+* [Olivia Jack - Hydra, Live Coding Visuals in the Browser](https://www.youtube.com/watch?v=cw7tPDrFIQg) : [hydra](https://hydra.ojack.xyz/?sketch_id=eerie_ear_0)
+* [Orca by Rekka & Devine ](https://hundredrabbits.itch.io/orca)
+* [Algorave Generation | Resident Advisor](https://www.youtube.com/watch?v=S2EZqikCIfY&ab_channel=ResidentAdvisor)
 
 Tu manques d’inspiration? Commence par te détendre avec l’idée que dans le monde du film musical tout a déjà été fait. C’est un art populaire depuis [la Révolution VHS](https://www.youtube.com/watch?v=oKHIWTTgvc0) le WTF est [tout à fait envisageable](http://www.musiques-incongrues.net/forum/discussion/1676/des-clips-des-clips-et-rien-que-des-clips/#Item_0).
 
