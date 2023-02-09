@@ -43,7 +43,7 @@ Tu manques d’inspiration? Commence par te détendre avec l’idée que dans le
 ## Contraintes
 Pour cet exercice tu devras produire un clipWeb musical sous forme d’une page web.
 * Tu choisis un morceau de musique qui ne doit pas être déjà clippé, si il est présent sur youtube : il n’a pas de vidéo.
-* Ce morceau sélectionné doit avoir moins de 1 millions de vues sur youtube, spotify, … si on ne découvre pas de nouvelles choses, c’est pas drôle. Es-tu déjà allé trainer du côté de [PetitTube](https://www.petittube.com/) ou sur [astronaut.io](http://astronaut.io/#) des collections surprenante de vidéos Youtube ayant 0 vue.
+* Ce morceau sélectionné doit avoir moins de 1 millions de vues sur youtube, spotify, … si on ne découvre pas de nouvelles choses, c’est pas drôle. Es-tu déjà allé trainer du côté de [PetitTube](https://www.petittube.com/) ou sur [astronaut.io](http://astronaut.io/#) des collections surprenantes de vidéos Youtube ayant 0 vue.
 * Ce morceau dure au minimum 2 minutes (connaissez vous le morceau [You suffer de Napalm Death](https://www.youtube.com/watch?v=9Z1IGjr2cT0) ?)
 * Aucune interaction entre le spectateur et la page web n’est demandée. Nous nous intéressons ici à la relation entre le son (rythmes, mélodies) et l’image.
 * Aucun fichier vidéo ne sera accepté dans le rendu final.
