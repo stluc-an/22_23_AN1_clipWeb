@@ -61,10 +61,10 @@ Pour cet exercice tu devras produire un clipWeb musical sous forme d’une page 
 * Choisis un morceau qui te plait (tu vas l’écouter en boucle durant toute la prod)
 * Utilise une application type TapTempo pour t’aider à comprendre la structure rythmique du morceau. Audacity peut aussi grandement t’aider à lire visuellement l’évolution d’un enregistrement sonore.
 * Tu ne sais quel morceau choisir ? Voici quelques playlists pleine de pépites 
- - https://chateau-merdique.tumblr.com/
- - http://asso-articho.blogspot.com/2018/08/de-dada-zouglou-archives.html
- - https://www.ouiedire.net/
- - https://www.thebrainradio.com/playlists.php
- - https://secretthirteen.org/
- - https://www.radiocampusparis.org/emission-category/amplitudes/
- - http://www.lelaboratoire.be/
+  - https://chateau-merdique.tumblr.com/
+  - http://asso-articho.blogspot.com/2018/08/de-dada-zouglou-archives.html
+  - https://www.ouiedire.net/
+  - https://www.thebrainradio.com/playlists.php
+  - https://secretthirteen.org/
+  - https://www.radiocampusparis.org/emission-category/amplitudes/
+  - http://www.lelaboratoire.be/
