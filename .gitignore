@@ -1,3 +1,4 @@
+# Tout ce qu'on ne verra pas sur github en tant qu'invité
 # General
 .DS_Store
 .AppleDouble
@@ -20,3 +21,5 @@ Temporary Items
 .apdisk
 
 node_modules/*
+
+dev/*
