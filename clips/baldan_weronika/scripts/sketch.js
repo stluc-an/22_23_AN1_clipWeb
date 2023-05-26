@@ -35,7 +35,6 @@ let mesAnims2 = [];
 let calinouAnims = [];
 
 function preload(){
-
 	mesAnims.push(
 		new Animator({
 			imgPatternAddress : "./assets/Bonhomme/Layer_[IMG_NUM].png",
