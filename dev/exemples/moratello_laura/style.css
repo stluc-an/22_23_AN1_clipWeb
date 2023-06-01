@@ -1,0 +1,23 @@
+p {
+    position: absolute;
+    font-size: 7vh;
+    font-family: sans-serif;
+    color: ghostwhite;
+    text-align: center;
+    top: 20vh; left: 50vw;
+    transform: translate(-50%, -50%);
+    transition-duration: 1s;
+}
+
+#laulau {
+    font-size: 3.5vh;
+    top: 34vh;
+}
+
+#lib {
+    font-size: 3.5vh;
+    top: 40vh;
+}
+
+.pa{opacity: 0%;}
+.visible{opacity: 100%;}
