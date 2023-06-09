@@ -1,0 +1,115 @@
+/*
+* @Author: Evrard Vincent
+* @Date:   2021-03-29 15:15:12
+* @Last Modified by:   oogre
+* @Last Modified time: 2021-04-22 11:52:36
+*/
+*{
+  transition: all 1s;
+}
+html, body, iframe{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul{
+	position: absolute;
+	background: #3d3d3d;
+	margin: 0;
+	padding: 16px 16px 16px 16px;
+	list-style-type: none;
+	color: #ededed;
+	height: 100%;
+	width : 32px;
+	opacity: 0.5;
+	overflow: hidden;
+}
+/*
+ul li span{
+	height: 0;
+	overflow: hidden;
+}*/
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	font-style: italic;
+}
+
+ul li span a {
+	font-size: 0.8em;
+}
+li a{
+	color: #dedede;
+	white-space: nowrap;
+}
+li.current a{
+	color: #fff;
+}
+
+ul:not(.open) li:not(:first-child).current span a:before {
+	content : " : ";
+	display: inline;
+}
+
+
+ul li:not(:first-child) span a:before {
+	content : "";
+}
+
+
+ul.open li:not(:first-child).current a{
+	white-space: break-spaces;
+}
+
+
+ul:not(.open) li:not(:first-child).current a{
+	white-space: nowrap;
+}
+
+ul.open{
+	width : 100px;
+	opacity: 1;
+}
+
+
+ul li:not(:first-child){
+	height: 20px;
+	text-overflow: "…";
+	overflow: hidden;
+}
+ul:not(.open) li:not(:first-child):not(.current){
+	height: 0;
+}
+ul:not(.open) li:not(:first-child).current{
+	transform: rotate(-90deg) translate(-500px, 0);
+	transform-origin: top left;
+	width: 500px;
+}
+ul:not(.open) li:not(:first-child).current span{
+	display: inline;
+}
+ul.open li:not(:first-child).current{
+	height: 100px;
+}
+ul.open li:not(:first-child).current span{
+	display: block;
+}
+ul.open li:not(:first-child):not(.current) span{
+	display: none;
+}
+
+
+
+
+ul li:first-child{
+	margin-bottom: 32px;
+}
+ul li{
+	margin-bottom: 8px;
+	text-transform: capitalize;
+}
