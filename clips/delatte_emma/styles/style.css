@@ -1,0 +1,21 @@
+/*
+* @Author: Delatte Emma
+* @Date:   2021-03-29 15:11:52
+* @Last Modified time: 202.-05-204 23:17:33
+*/
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+button {
+	border: none;
+	background: transparent;
+	color: greenyellow;
+	font-size: 2.5em;
+	font-family: "Reboot Crush";
+	src: url ("assets\Reboot Crush.ttf");
+}
