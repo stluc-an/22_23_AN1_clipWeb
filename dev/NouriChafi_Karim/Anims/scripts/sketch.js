@@ -126,7 +126,7 @@ function setup() {
 	
 	
 	
-	sequencer = new Sequencer(audioPath, 93, true);
+	sequencer = new Sequencer(audioPath, 93, false);
     sequencer.registerSequence({
        
 		name : "intrerro",
