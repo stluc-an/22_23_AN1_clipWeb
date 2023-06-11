@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipWeb Xploration</title>
+  <script src="../../lib/p5/p5.min.js"></script>
+  <script src="../../lib/p5/addons/p5.sound.min.js"></script>
+  <script src="../../lib/SequencerJS/dist/bundle.js"></script>
+  <script src="./scripts/Particule.js"></script>
+  <script src="./scripts/sketch.js"></script>
+  <script src="./scripts/parite1.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <canvas id="canvas"></canvas>
+  </main>
+
+  <script>
+    function changeBackgroundColor() {
+      var seconds = 1;
+      var interval = setInterval(function() {
+        // Générer une couleur aléatoire
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        
+        // Changer la couleur de l'arrière-plan
+        document.body.style.backgroundColor = randomColor;
+        
+        // Augmenter le compteur de secondes
+        seconds++;
+        
+        // Vérifier si on a atteint 290 secondes (5 minutes)
+        if (seconds > 290) {
+          clearInterval(interval);
+        }
+      }, 1000); // 1000 millisecondes = 1 seconde
+    }
+
+    // Appeler la fonction pour démarrer le changement de couleur
+    changeBackgroundColor();
+  </script>
+</body>
+</html>
