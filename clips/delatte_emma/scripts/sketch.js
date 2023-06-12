@@ -2,7 +2,7 @@
   beakerProject - sketch.js
   @author Delatte Emma
   @Date:   2023-04-10
-  @Last Modified time: 2023-06-10 23:12:49
+  @Last Modified time: 2023-06-12 15:54:27
 \*----------------------------------------*/
 
 let audioPath = "./assets/audio/Musique/delatte_emma - Gesaffelstein Novo Sonic System.mp3";
@@ -19,73 +19,73 @@ function preload(){
 	myFont = loadFont('./assets/Reboot Crush.ttf');
 	mesAnims.push(
 		new Animator({
-			imgPatternAddress : "./assets/images/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/images/img[IMG_NUM].PNG",
 			imgCount : 36,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/images/img[IMG_NUM].PNG",
 			imgCount : 36,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images2/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/images2/img[IMG_NUM].PNG",
 			imgCount : 19,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images3/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/images3/img[IMG_NUM].PNG",
 			imgCount : 313,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images4/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/images4/img[IMG_NUM].PNG",
 			imgCount : 1,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 1	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/bugtime/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/bugtime/img[IMG_NUM].PNG",
 			imgCount : 23,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/bugtime2/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/bugtime2/img[IMG_NUM].PNG",
 			imgCount : 23,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/bugtime3/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/bugtime3/img[IMG_NUM].PNG",
 			imgCount : 23,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/completedistortion/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/completedistortion/img[IMG_NUM].PNG",
 			imgCount : 1,		//Nombre d'images à charger
 			firstImageNum : 0,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/bugtime4/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/bugtime4/img[IMG_NUM].PNG",
 			imgCount : 23,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/bugtime5/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/bugtime5/img[IMG_NUM].PNG",
 			imgCount : 45,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images/img[IMG_NUM].png",
+			imgPatternAddress : "./assets/images/img[IMG_NUM].PNG",
 			imgCount : 36,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
