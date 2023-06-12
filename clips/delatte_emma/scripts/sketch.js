@@ -2,7 +2,7 @@
   beakerProject - sketch.js
   @author Delatte Emma
   @Date:   2023-04-10
-  @Last Modified time: 2023-06-12 15:54:27
+  @Last Modified time: 2023-06-12 15:56:11
 \*----------------------------------------*/
 
 let audioPath = "./assets/audio/Musique/delatte_emma - Gesaffelstein Novo Sonic System.mp3";
@@ -19,31 +19,31 @@ function preload(){
 	myFont = loadFont('./assets/Reboot Crush.ttf');
 	mesAnims.push(
 		new Animator({
-			imgPatternAddress : "./assets/images/img[IMG_NUM].PNG",
+			imgPatternAddress : "./assets/images/img[IMG_NUM].png",
 			imgCount : 36,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images/img[IMG_NUM].PNG",
+			imgPatternAddress : "./assets/images/img[IMG_NUM].png",
 			imgCount : 36,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images2/img[IMG_NUM].PNG",
+			imgPatternAddress : "./assets/images2/img[IMG_NUM].png",
 			imgCount : 19,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images3/img[IMG_NUM].PNG",
+			imgPatternAddress : "./assets/images3/img[IMG_NUM].png",
 			imgCount : 313,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images4/img[IMG_NUM].PNG",
+			imgPatternAddress : "./assets/images4/img[IMG_NUM].png",
 			imgCount : 1,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 1	//Nombre de chiffres pour la renumérotation des images
@@ -85,7 +85,7 @@ function preload(){
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
 		}),
 		new Animator({
-			imgPatternAddress : "./assets/images/img[IMG_NUM].PNG",
+			imgPatternAddress : "./assets/images/img[IMG_NUM].png",
 			imgCount : 36,		//Nombre d'images à charger
 			firstImageNum : 1,	//Première image de la série d'images
 			numberLength : 4	//Nombre de chiffres pour la renumérotation des images
