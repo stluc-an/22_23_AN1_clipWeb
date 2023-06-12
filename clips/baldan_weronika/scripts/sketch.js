@@ -4,6 +4,7 @@ let sequencer;
 let bgColor;
 let isRectDrawable = false;
 let isTourniquetDrawable = false;
+let isRectTourniquetDrawable = false;
 
 let rectColor;
 let jaune;
@@ -182,7 +183,7 @@ function preload(){
 	calinouAnims.push(
 		new Animator({
 			imgPatternAddress : "./assets/calinou/Layer_[IMG_NUM].png",
-			imgCount : 66,
+			imgCount : 92,
 			firstImageNum : 0,
 			numberLength : 4,
 			x : 123,
@@ -667,6 +668,9 @@ function setup() {
 				visageAnims[0].y = 0;
 				visageAnims[0].w = 1000;
 				visageAnims[0].h = 800;
+
+				circle_hole3.color = color(37, 37, 39);
+				circle_hole3.setDrawable(true);
 				
 		},
 		onStep : (event) => {
@@ -691,6 +695,7 @@ function setup() {
 		onStop : (event) => {
 			console.log(event);
 				visageAnims[0].setDrawable(false);
+				circle_hole3.setDrawable(false);
 		
 		},
 	});
@@ -751,6 +756,7 @@ function setup() {
 			}
 
 			if(event.step == 172){
+				circle_hole4.color = color(255);
 				circle_hole4.setDrawable(true);
 			}
 
@@ -859,30 +865,40 @@ function setup() {
 
 	sequencer.registerSequence({
 		name : "ronds",
-		start : 255,
-		stop : 265,
+		start : 257,
+		stop : 267,
 		onStart : (event) => {
 			console.log(event);
-			circle_hole.color = color(rougeF);
-			circle_hole.setDrawable(true);
+			bgColor = color(255);
 
-			circle_hole2.color = color(rougeF);
-			circle_hole2.setDrawable(true);
-
-			circle_hole3.color = color(rougeF);
+			circle_hole3.color = color(0);
 			circle_hole3.setDrawable(true);
 
-			circle_hole4.color = color(rougeF);
+			circle_hole4.color = color(0);
 			circle_hole4.setDrawable(true);
+			isTourniquetDrawable = true;
+			isRectTourniquetDrawable = true;
+
 				
+		},
+
+		onStep : (event) => {
+
+			if(rectColor == grisF) { // Si rectColor est gris foncé, il devient rouge foncé, et s'il est Rouge Foncé, il devient gris foncé
+				rectColor = rougeF;
+			} else if(rectColor == rougeF) {
+				rectColor = grisF;
+			}
+			
 		},
 
 		onStop : (event) => {
 			console.log(event);
-			circle_hole.setDrawable(false);
-			circle_hole2.setDrawable(false);
 			circle_hole3.setDrawable(false);
 			circle_hole4.setDrawable(false);
+			isTourniquetDrawable = false;
+			isRectTourniquetDrawable = false;
+			bgColor = color(37, 37, 39)
 		
 		},
 	});
@@ -890,7 +906,7 @@ function setup() {
 	
 	sequencer.registerSequence({
 		name : "ronds3",
-		start : 275,
+		start : 274,
 		stop : 288,
 		steps:[1, 1+1/8, 1+2/8, 1+3/8, 1+4/8, 1+5/8, 1+6/8, 1+7/8],
 		onStart : (event) => {
@@ -1105,6 +1121,9 @@ function setup() {
 			mesAnims[0].w = 1500;
 			mesAnims[0].h = 800;
 			mesAnims[0].setDrawable(true);
+
+			circle_hole3.color = color(187, 184, 181);
+			circle_hole3.setDrawable(true);
 		},
 
 		onStep : (event) => {
@@ -1118,6 +1137,7 @@ function setup() {
 		onStop : (event) => {
 			console.log(event);
 			mesAnims[0].setDrawable(false);
+			circle_hole3.setDrawable(false);
 		},
 	
 	});
@@ -1135,6 +1155,8 @@ function setup() {
 			mesAnims2[0].w = 1500;
 			mesAnims2[0].h = 800;
 			mesAnims2[0].setDrawable(true);
+			circle_hole3.color = color(255, 0, 0);
+			circle_hole3.setDrawable(true);
 		},
 
 		onStep : (event) => {
@@ -1150,15 +1172,16 @@ function setup() {
 		onStop : (event) => {
 			console.log(event);
 			mesAnims2[0].setDrawable(false);
+			circle_hole3.setDrawable(false);
 		},
 	
 	});
 
 	sequencer.registerSequence({
 		name : "calinou",
-		start : 401,
-		stop : 415,
-		steps:[1, 1+1/2],
+		start : 402,
+		stop : 422,
+		steps:[1, 1+1/15, 1+2/15, 1+3/15, 1+4/15, 1+5/15, 1+6/15, 1+7/15, 1+8/15, 1+9/15, 1+10/15, 1+11/15, 1+12/15, 1+13/15, 1+14/15],
 		onStart : (event) => {
 			console.log(event);
 			calinouAnims[0].x = 0;
@@ -1166,11 +1189,14 @@ function setup() {
 			calinouAnims[0].w = 1500;
 			calinouAnims[0].h = 800;
 			calinouAnims[0].setDrawable(true);
+			bgColor = color(37, 37, 39);
 		},
 
 		onStep : (event) => {
 			console.log(event.amount);
 			calinouAnims[0].setCursor(event.amount);
+			let cursor = event.amount;
+			calinouAnims[0].setCursor(cursor);
 
 			
 		},
@@ -1206,6 +1232,16 @@ function draw() {
 		noStroke();
 		fill(187, 184, 181);
 		rect(0, 0, 150, 150);
+		pop();
+	}
+
+	if(isRectTourniquetDrawable) {
+		push();
+		translate(width / 2, height / 2);
+		rotate(millis() * 0.004);
+		noStroke();
+		fill(rectColor);
+		rect(0, 0, 300, 300);
 		pop();
 	}
 
